@@ -1,0 +1,88 @@
+<section class="cart-modal">
+  <header class="cart-modal__header">
+    <h2 class="cart-modal__title">Shopping cart</h2>
+    <button class="cart-modal__close-btn" aria-label="Close cart">&times;</button>
+  </header>
+   <!-- Приклад товару в корзині -->
+  <div class="cart-modal__products">
+    <h3 class="cart-modal__subtitle">Products</h3>
+    <div class="cart-modal__product">
+      <img
+        src="img/our-app/cart/fresh-figs.jpg"
+        alt="Fresh Figs"
+        class="cart-modal__product-img"
+        width="64"
+        height="64"
+      />
+      <div class="cart-modal__product-info">
+        <p class="cart-modal__product-name">Fresh Figs (0002)</p>
+        <div class="cart-modal__quantity-wrapper">
+          <label class="cart-modal__quantity-label" for="quantity-figs">Qty:</label>
+          <select id="quantity-figs" class="cart-modal__quantity-select">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <p class="cart-modal__product-price">5,00USD</p>
+      </div>
+      <button class="cart-modal__remove-btn" aria-label="Remove item">
+        🗑️
+      </button>
+    </div>
+    <a href="#" class="cart-modal__promo-link">Promo code</a>
+    <p class="cart-modal__total">Total: <strong>5,00USD</strong></p>
+  </div>
+
+  <form class="cart-modal__form">
+    <h3 class="cart-modal__subtitle">Place an order</h3>
+    <label class="cart-modal__label" for="cart-name">
+      Name <span class="cart-modal__required">*</span>
+    </label>
+    <input
+      type="text"
+      id="cart-name"
+      name="name"
+      placeholder="Your name"
+      required
+      class="cart-modal__input"
+    />
+
+    <label class="cart-modal__label" for="cart-email">
+      Email <span class="cart-modal__required">*</span>
+    </label>
+    <input
+      type="email"
+      id="cart-email"
+      name="email"
+      placeholder="Your email address"
+      required
+      class="cart-modal__input"
+    />
+
+    <label class="cart-modal__label" for="cart-phone">
+      Phone <span class="cart-modal__required">*</span>
+    </label>
+    <input
+      type="tel"
+      id="cart-phone"
+      name="phone"
+      placeholder="Your phone"
+      required
+      class="cart-modal__input"
+    />
+
+    <label class="cart-modal__label" for="cart-comment">
+      Comment
+    </label>
+    <textarea
+      id="cart-comment"
+      name="comment"
+      placeholder="Your comment"
+      class="cart-modal__textarea"
+      rows="4"
+    ></textarea>
+
+    <button type="submit" class="cart-modal__submit-btn">Order</button>
+  </form>
+</section>
