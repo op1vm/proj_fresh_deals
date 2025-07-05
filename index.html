@@ -13,12 +13,6 @@
   </head>
   <body>
     <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
-    <!-- Maksym Savchuk -->
-    <section
-      data-hx-trigger="load"
-      data-hx-swap="outerHTML"
-      data-hx-get="index.our-app.partial.html"
-    ></section>
     <header class="header">
       <nav
         data-hx-trigger="load"
@@ -26,7 +20,14 @@
         data-hx-get="global.header-nav.partial.html"
       ></nav>
     </header>
-    <main class="main"></main>
+    <main class="main">
+    <!-- Maksym Savchuk -->
+    <section
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="index.our-app.partial.html"
+    ></section>
+  </main>
     <footer class="footer"></footer>
   </body>
 </html>
