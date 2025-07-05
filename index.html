@@ -14,10 +14,17 @@
   <body>
     <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
     <header class="header">
+      <!-- Ira Mazurak -->
       <nav
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
         data-hx-get="global.header-nav.partial.html"
+      ></nav>
+      <!-- Ira Mazurak -->
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.header-hero.partial.html"
       ></nav>
     </header>
     <main class="main">
