@@ -32,3 +32,4 @@ Add the data-proofer-ignore attribute to any tag to ignore it from every check.
 -Maksym Savchuk
 -Vitalii Lashchuk
 -Iryna Mazurak
+-Maryna Grytsun
