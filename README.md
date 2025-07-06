@@ -37,3 +37,4 @@ Add the data-proofer-ignore attribute to any tag to ignore it from every check.
 - Yuliana Sadoviak
 - bobreshova ira
 - Patynok Diana
+- Monarshuk Artem
