@@ -4,12 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Market Website Template Demo</title>
-    <link rel="shortcut icon" href="./img/favicon/favicon.png" type="image/x-icon" sizes="16x16" />
+    <link
+      rel="shortcut icon"
+      href="./img/favicon/favicon.png"
+      type="image/x-icon"
+      sizes="16x16"
+    />
     <script
       src="https://unpkg.com/htmx.org@1.9.10"
       integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <header class="header">
@@ -24,15 +30,15 @@
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
         data-hx-get="index.header-hero.partial.html"
-      ></nav>
+      ></div>
     </header>
     <main class="main">
       <!-- Oleksii Melnychuk -->
       <section
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
-        data-hx-get="index.about-us.partial.html">
-      </section>
+        data-hx-get="index.about-us.partial.html"
+      ></section>
       <!-- Anna Serdyuk -->
       <section
         data-hx-trigger="load"
@@ -52,7 +58,7 @@
         data-hx-get="index.our-app.partial.html"
       ></section>
       <!-- Maryna Grytsun -->
-      <section 
+      <section
         data-hx-trigger="load"
         data-hx-get="cart.modal.partial.html"
         data-hx-swap="outerHTML"
@@ -63,7 +69,7 @@
         data-hx-swap="outerHTML"
         data-hx-get="index.need-help.partial.html"
       ></section>
-	  <!-- Serhii Skoryk -->
+      <!-- Serhii Skoryk -->
       <section
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
@@ -89,10 +95,10 @@
         data-hx-get="index.organic.partial.html"
       ></section>
     </main>
-    <footer 
-	data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="global.footer.partial.html">
-    </footer>
+    <footer
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.footer.partial.html"
+    ></footer>
   </body>
 </html>
