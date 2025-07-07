@@ -12,7 +12,6 @@
     ></script>
   </head>
   <body>
-    <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
     <header class="header">
       <!-- Ira Mazurak -->
       <nav
@@ -53,11 +52,10 @@
         data-hx-get="index.our-app.partial.html"
       ></section>
       <!-- Maryna Grytsun -->
-        <section 
-        data-hx-trigger="click from .header__cart-link"
+      <section 
+        data-hx-trigger="load"
         data-hx-get="cart.modal.partial.html"
-        data-hx-swap="innerHTML"
-        class="cart-modal__wrapper"
+        data-hx-swap="outerHTML"
       ></section>
       <!-- bobreshova ira -->
       <section
@@ -91,6 +89,10 @@
         data-hx-get="index.organic.partial.html"
       ></section>
     </main>
-    <footer class="footer"></footer>
+    <footer 
+	data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="global.footer.partial.html">
+    </footer>
   </body>
 </html>
