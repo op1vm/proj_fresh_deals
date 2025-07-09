@@ -36,3 +36,10 @@ Add the data-proofer-ignore attribute to any tag to ignore it from every check.
 - Maryna Grytsun
 - Yuliana Sadoviak
 - bobreshova ira
+- Patynok Diana
+- Monarshuk Artem
+- Bohdan Gusak
+- Serhii Skoryk
+- Melnychuk Oleksii 
+- Serdyuk Anna
+- Veselkov Maksym
