@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+.our-app {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 40px;
+  font-family: Arial, sans-serif;
+}
+
+.our-app__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  margin-top: 4200px;
+}
+
+  .our-app__h2 {
+  margin-top: 200px;
+  margin-left: 10px;
+  color: rgb(169, 198, 35);
+  font-size: 14px;
+  font-family: "istok web", sans-serif;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.our-app__title {
+  font-size: 42px;
+  font-family: "istok web", sans-serif;
+  font-weight: 600;
+  color: #333333;
+  margin-top: 100px;
+  margin-left: 217px;
+  font-style: bold;
+}
+
+.our-app__subtitle {
+  font-size: 18px;
+  font-family: "Source Sans 3", sans-serif;
+  color: 333;
+  margin-top: 20px;
+  margin-left: 217px;
+}
+
+.our-app__icon {
+  width: 70px;
+  height: 70px;
+  margin-left: 218px;
+  margin-top: 30px;
+}
+
+.our-app__feature-title {
+  font-size: 22px;
+  font-family: "istok web", sans-serif;
+  font-weight: 600;
+  margin-left: 303px;
+  margin-top: -62px;
+}
+
+.our-app__feature-text {
+  font-size: 16px;
+  font-family: "Source Sans 3", sans-serif;
+  color: #707070;
+  margin-left: 303px;
+  margin-top: 0px;
+}
+
+.our-app__note {
+  font-size: 16px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 500;
+  color: #707070;
+  margin-top: 30px;
+  z-index: -1;
+  margin-left: 240px;
+}
+.our-app__stores {
+  display: flex;
+  gap: 15px;
+  margin-top: 40px;
+  margin-left: 240px;
+}
+
+.our-app__store-link img {
+
+  border-radius: 5px;
+}
+
+.our-app__mockup {
+  position: relative;
+  width: 280px;
+  height: auto;
+  aspect-ratio: 130 / 281;
+  flex-shrink: 0;
+  margin-right: 100px;
+  margin-top: 150px;
+}
+
+.our-app__phone-img,
+.our-app__phone-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.8);
+  object-fit: contain;
+  display: block;
+}
+
+.our-app__phone-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(0.7);
+  transform-origin: center;
+  z-index: 1;
+}
+
+.our-app__phone-frame {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.our-app__mockup {
+  position: relative;
+  width: 280px;
+  aspect-ratio: 130 / 281;
+  flex-shrink: 0;
+  margin-right: 200px;
+  margin-top: 130px;
+  z-index: 1;
+}
+.our-app__phone-background {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  margin-top: 4200px;
+  margin-left: 200px;
+}
+
+
+@media (min-width: 1440px) {
+  .our-app__text-content {
+    margin-left: -275px;
+    margin-top: 130px;
+  }
+
+  .our-app__mockup {
+    width: 280px;
+    margin-left: 290px;
+    margin-top: 130px;
+  }
+
+  .our-app__phone-background {
+    width: 650px;
+    height: 650px;
+    top: 53%;
+  }
+}
