@@ -32,3 +32,9 @@ h6 {
   font-family: "Istok Web", sans-serif;
   color: var(--text-color-dark);
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
