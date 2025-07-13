@@ -13,6 +13,7 @@
   --text-color-light: #707070;
   --cta-color: #f69946;
   --accent-color: #a9c623;
+  --color-bg-light: #fbf4f0;
   scroll-behavior: smooth;
   font-family: "Source Sans 3", sans-serif;
 }
