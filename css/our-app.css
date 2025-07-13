@@ -1,8 +1,4 @@
 :root {
-  --text-color-dark: #333333;
-  --text-color-light: #707070;
-  --accent-color-green: #a9c623;
-  --accent-color-orange: #f69946;
   --color-bg-light: #fbf4f0;
 }
 
@@ -25,7 +21,7 @@
 }
 
 .our-app__h2 {
-  color: var(--accent-color-green);
+  color: var(--accent-color);
   font-size: 14px;
   font-weight: 600;
   font-family: "Istok Web", sans-serif;
