@@ -2,5 +2,8 @@
 @import "our-app.css";
 @import "global.header.css";
 @import "index.fresh-deals.css";
+@import "global.header-nav.css";
+@import "index.header-hero.css";
 @import "index.how-it-works.css";
 @import "index.partners.css";
+@import "cart-modal.css";
