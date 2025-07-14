@@ -1,86 +1,85 @@
 /* Oleksii Melnychuk */
 .about-us {
-  .about-us__main {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+  padding:60px 0;
+}
+  
+.about-us__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 
     @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
     }
   }
 
-  .about-us__image {
-    flex: 1;
-  }
-
-  .about-us__body {
-    flex: 1;
-  }
-
-  .about-us__title {
-    color: var(--cta-color);
-    font-weight: 600;
-    font-size: 16px;
-    margin-bottom: 12px;
-  }
-
-  .about-us__subtitle {
-    font-weight: 700;
-    line-height: 1.2;
-    font-size: clamp(
-      34px,
-      calc(34px + (42 - 34) * ((100vw - 320px) / (1200 - 320))),
-      42px
-    );
-    margin-bottom: 20px;
-    display: block;
-    color: var(--text-color-dark);
-  }
-
-  .about-us__description {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: var(--text-color-dark);
-  }
-
-  .about-us__list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px 20px;
-    margin-bottom: 20px;
-    padding-left: 0;
-    list-style: none;
-
-    .about-us__item::before {
-      content: url(../img/about-us/tick.svg);
-      color: #a5c100;
-      margin-right: 4px;
-    }
-  }
-
-  .about-us__text {
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--text-color-light);
-    margin-bottom: 30px;
-  }
-
-  .about-us__button {
-    padding: 12px 24px;
-    background-color: var(--cta-color);
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-    .about-us__button:hover {
-      background-color: #c4661a;
-    }
-  }
+.about-us__image {
+  flex: 1;
 }
+
+.about-us__body {
+  flex: 1;
+}
+
+.about-us__title {
+  color: var(--cta-color);
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.about-us__subtitle {
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: clamp(34px,calc(34px + (42 - 34) * ((100vw - 320px) / (1200 - 320))),42px);
+  margin-bottom: 20px;
+  display: block;
+  color: var(--text-color-dark);
+  }
+
+.about-us__description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--text-color-dark);
+  }
+
+.about-us__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 20px;
+  margin-bottom: 20px;
+  padding-left: 0;
+  list-style: none;
+  }
+
+.about-us__item::before {
+  content: url(../img/about-us/tick.svg);
+  color: #a5c100;
+  margin-right: 4px;
+    }
+  
+
+.about-us__text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color-light);
+  margin-bottom: 30px;
+  }
+
+.about-us__button {
+  padding: 12px 24px;
+  background-color: var(--cta-color);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+.about-us__button:hover {
+  background-color: #c4661a;
+    }
