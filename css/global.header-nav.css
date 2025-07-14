@@ -1,0 +1,27 @@
+.header {
+  .header__nav-top {
+    display: none;
+  }
+  .header__nav-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    .header__menu {
+      display: none;
+    }
+    .header__burger-menu {
+        border: 0;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 12px 8px;
+        .header__burger-line {
+            width: 24px;
+            height: 2px;
+            background-color: var(--text-color-dark);
+        }
+    }
+  }
+}
