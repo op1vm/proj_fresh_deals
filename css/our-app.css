@@ -14,15 +14,15 @@
 }
 
 .our-app::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0;
+  top: -100px;
   left: 0;
   width: 100%;
-  height: 120px;
-  background-image: url("img/our-app/inner.jpeg");
+  height: 100px;
+  background-image: url("../img/our-app/inner.jpeg");
   background-size: cover;
-  background-position: bottom center;
+  background-position: center center;
   background-repeat: no-repeat;
   z-index: 1;
 }
@@ -165,28 +165,29 @@
     gap: 120px;
     text-align: left;
   }
-  
+
   .our-app::before {
     height: 150px;
   }
 
   .our-app__text-content {
     align-items: flex-start;
-    transform: translateX(-30px);
+    transform: translateX(-100px);
   }
 
   .our-app__title {
     font-size: 48px;
   }
- 
+
   .our-app__feature-icon {
-  width: 70px;
-  height: 70px;
-  flex-shrink: 0;
-}
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+  }
 
   .our-app__stores {
     justify-content: flex-start;
+    flex-direction: row;
   }
 
   .our-app__mockup {
