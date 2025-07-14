@@ -1,5 +1,89 @@
-.about-us{
-    &__title{
+.about-us {
+
+    &__main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__image {
+        flex: 1;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    &__body {
+        flex: 1;
+    }
+
+    &__title {
         color:var(--cta-color);
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        line-height: 1.2;
+        font-size: clamp(34px, calc(34px + (42 - 34) * ((100vw - 320px) / (1200 - 320))), 42px);
+        margin-bottom: 20px;
+        display: block;
+        color: var(--text-color-dark);
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color:var(--text-color-dark);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px 20px;
+        margin-bottom: 20px;
+        padding-left: 0;
+        list-style: none;
+
+        & li::before {
+            content:url(../img/about-us/tick.svg);
+            color: #a5c100;
+            margin-right: 4px;
+        }
+    }
+
+    &__text {
+        font-size: 15px;
+        line-height: 1.6;
+        color: var(--text-color-light);
+        margin-bottom: 30px;
+    }
+
+    &__button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: var(--cta-color);
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            background-color:#c4661a;
+        }
     }
 }
