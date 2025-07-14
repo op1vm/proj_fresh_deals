@@ -1,6 +1,6 @@
-   /* Oleksii Melnychuk */
+/* Oleksii Melnychuk */
 .about-us {
-  &__main {
+  .about-us__main {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,22 +12,22 @@
     }
   }
 
-  &__image {
+  .about-us__image {
     flex: 1;
   }
 
-  &__body {
+  .about-us__body {
     flex: 1;
   }
 
-  &__title {
+  .about-us__title {
     color: var(--cta-color);
     font-weight: 600;
     font-size: 16px;
     margin-bottom: 12px;
   }
 
-  &__subtitle {
+  .about-us__subtitle {
     font-weight: 700;
     line-height: 1.2;
     font-size: clamp(
@@ -40,14 +40,14 @@
     color: var(--text-color-dark);
   }
 
-  &__description {
+  .about-us__description {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
     color: var(--text-color-dark);
   }
 
-  &__list {
+  .about-us__list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px 20px;
@@ -55,21 +55,21 @@
     padding-left: 0;
     list-style: none;
 
-    & li::before {
+    .about-us__item::before {
       content: url(../img/about-us/tick.svg);
       color: #a5c100;
       margin-right: 4px;
     }
   }
 
-  &__text {
+  .about-us__text {
     font-size: 16px;
     line-height: 1.6;
     color: var(--text-color-light);
     margin-bottom: 30px;
   }
 
-  &__button {
+  .about-us__button {
     padding: 12px 24px;
     background-color: var(--cta-color);
     color: #fff;
@@ -79,7 +79,7 @@
     transition: background-color 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-    &:hover {
+    .about-us__button:hover {
       background-color: #c4661a;
     }
   }
