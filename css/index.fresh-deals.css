@@ -1,4 +1,4 @@
-.fresh-deals__header{
+.fresh-deals__header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,45 +7,95 @@
   padding: 0 1rem;
   margin: 0 auto 2rem;
   max-width: 800px;
-  
-    .fresh-deals__title{
-        color:var(--cta-color);
-        font-size: 1rem;
-    }
-    .fresh-deals__subtitle{
-        color: var(--text-color-dark);
-        font-size: 2.1rem;
-        font-weight: bold;
-    }
-    .fresh-deals__description{
-        color: var(--text-color-dark);
-        font-size: 1.1rem;
-    }
+
+  .fresh-deals__title {
+    color: var(--cta-color);
+    font-size: 1rem;
+  }
+  .fresh-deals__subtitle {
+    color: var(--text-color-dark);
+    font-size: 2.1rem;
+    font-weight: bold;
+  }
+  .fresh-deals__description {
+    color: var(--text-color-dark);
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+  }
 }
-.fresh-deals__tabs{
-    display: flex;
+.fresh-deals__tabs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.9rem 1.25rem;
+  margin: 1.3rem auto 0.4rem;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  .fresh-deals__tab {
+    color: var(--text-color-light);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0 0.5rem;
+    white-space: nowrap;
+
+    &:hover {
+      color: var(--text-color-dark);
+    }
+  }
+}
+.fresh-deals__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
+  gap: 1.5rem;
+  padding: 1rem;
+  justify-items: center;
+  box-sizing: border-box;
+  justify-content: center;
+
+  .fresh-deals__product {
+    background-color: var(--color-bg-light);
+    text-align: center;
+
+    .fresh-deals__image {
+      height: 13.6rem;
+      width: 13.6rem;
+      cursor: pointer;
+    }
+    .fresh-deals__name,
+    .fresh-deals__price {
+      font-weight: 600;
+      color: var(--text-color-dark);
+      cursor: pointer;
+    }
+    .fresh-deals__price {
+      color: var(--accent-color);
+    }
+  }
+}
+@media (max-width: 768px) {
+  .fresh-deals__header {
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .fresh-deals__tabs {
     flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
-    padding-bottom:0.9rem;
-    padding-left:1.25rem;
-    padding-right:1.25rem;
-    padding-top:0.9rem;
-    margin-top: 1.3rem;
-    margin-bottom: 0.4rem;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+  }
 
-    .fresh-deals__tab{
-        color:var(--text-color-light);
-        text-decoration: none;
-        font-size: 0.8rem;
-        font-weight: bold;
-        padding: 0;
-
-        &:hover{
-            color: var(--text-color-dark);
-        }
-    }
+  .fresh-deals__tab {
+    width: auto;
+    text-align: center;
+    padding: 0.6rem 0;
+  }
 }
-
-
-
