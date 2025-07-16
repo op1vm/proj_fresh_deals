@@ -75,22 +75,25 @@
 }
 
 .organic__product-buy-button {
-  padding: 12px 18px; 
+  width: 93.06px; 
+  height: 42.8px; 
+  padding: 0; 
   background-color: transparent; 
   color: #ff6f00; 
   border: 2px solid #a9c623; 
   border-radius: 5px;
   cursor: pointer;
-  font-size: 18px; 
+  font-size: 16px; 
   transition: background-color 0.3s, color 0.3s; 
-  margin-top: 15px; 
-  width: 100%; 
+  margin-top: 10px; 
+  text-align: center; 
 }
 
 .organic__product-buy-button:hover {
   background-color: #a9c623; 
   color: white; 
 }
+
 
 @media (max-width: 1024px) {
   .organic__products {
