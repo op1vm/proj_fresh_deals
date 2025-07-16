@@ -32,9 +32,9 @@
   font-weight: 700;
   line-height: 1.2;
   font-size: clamp(
-      34px,                                                             /* Мінімальний розмір шрифту */
-      calc(34px + (42 - 34) * ((100vw - 320px) / (1200 - 320))),        /* Оптимальний (плавний) розмір */
-      42px);                                                             /* Максимальний розмір шрифту */
+      34px,                                                           /* Мінімальний розмір шрифту */
+      calc(34px + (42 - 34) * ((100vw - 320px) / (1200 - 320))),      /* Адаптивний розмір */ 
+      42px);                                                          /* Максимальний розмір шрифту */
 
   margin-bottom: 20px;
   display: block;
@@ -55,11 +55,16 @@
   margin-bottom: 20px;
   padding-left: 0;
   list-style: none;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, minmax (0, 1fr));
+    gap: 7px 5px;
+  }
 }
 
 .about-us__item::before {
   content: url(../img/about-us/tick.svg);
-  color: var(--accent-color);
+  background-color: var(--accent-color);
   margin-right: 4px;
 }
 
@@ -73,7 +78,6 @@
 .about-us__button {
   padding: 12px 24px;
   background-color: var(--cta-color);
-  color: #fff;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
@@ -83,5 +87,10 @@
 
 .about-us__button:hover {
   background-color: var(--cta-color-hover);
-  
+}
+
+.about-us__button::after {
+  content:url(../img/about-us/apple-icon.svg);
+  margin-left:3px;
+  background-color:var(--color-white);
 }
