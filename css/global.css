@@ -17,8 +17,8 @@
   --accent-color-hover: #94af16;
   --color-bg-light: #fbf4f0;
   --links-bg: #a49d98;
-  --color-white: #ffffff;
-  --color-red: red;
+  --text-light-color: #ffffff;
+  --error-color: red;
   scroll-behavior: smooth;
   font-family: "Source Sans 3", sans-serif;
 }
