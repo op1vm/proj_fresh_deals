@@ -1,6 +1,50 @@
 .header {
   .header__nav-top {
     display: none;
+    @media (min-width: 992px) {
+      display: block;
+      background-color: var(--color-bg-light);
+    }
+    .header__nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+    }
+    .header__contacts {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      .header__contacts-item {
+        color: var(--cta-color);
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 0.7px;
+        .header__contacts-link {
+          text-decoration: none;
+          color: var(--links-bg);
+          font-weight: 500;
+        }
+      }
+    }
+    .header__socials {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      .header__socials-link {
+        display: flex;
+        &:hover {
+          .header__socials-icon {
+            opacity: 1;
+          }
+        }
+      }
+      .header__socials-icon {
+        fill: var(--links-bg);
+        opacity: 0.8;
+        transition: opacity 0.2s ease-in-out;
+      }
+    }
   }
   .header__nav-bottom {
     display: flex;
@@ -9,19 +53,42 @@
     padding: 20px 0;
     .header__menu {
       display: none;
+      @media (min-width: 992px) {
+        display: block;
+      }
     }
     .header__burger-menu {
-        border: 0;
-        background-color: transparent;
+      border: 0;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 12px 8px;
+      @media (min-width: 992px) {
+        display: none;
+      }
+      .header__burger-line {
+        width: 24px;
+        height: 2px;
+        background-color: var(--text-color-dark);
+      }
+    }
+    .header__menu {
+      display: none;
+      @media (min-width: 992px) {
+        list-style-type: none;
         display: flex;
-        flex-direction: column;
-        gap: 5px;
-        padding: 12px 8px;
-        .header__burger-line {
-            width: 24px;
-            height: 2px;
-            background-color: var(--text-color-dark);
+        gap: 15px;
+      }
+      .header__menu-link {
+        text-decoration: none;
+        color: var(--text-color-dark);
+        font-weight: 500;
+        transition: color 0.2s ease-in-out;
+        &:hover {
+          color: var(--cta-color);
         }
+      }
     }
   }
 }
