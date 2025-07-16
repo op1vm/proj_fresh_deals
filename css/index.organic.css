@@ -76,31 +76,31 @@
 
 .organic__product-buy-button {
   padding: 12px 18px; 
-  background-color: transparent; /* Прозорий фон */
-  color: #ff6f00; /* Оранжевий текст */
-  border: 2px solid #a9c623; /* Оранжева рамка */
+  background-color: transparent; 
+  color: #ff6f00; 
+  border: 2px solid #a9c623; 
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px; 
-  transition: background-color 0.3s, color 0.3s; /* Додано перехід для фону і кольору */
+  transition: background-color 0.3s, color 0.3s; 
   margin-top: 15px; 
   width: 100%; 
 }
 
 .organic__product-buy-button:hover {
-  background-color: #a9c623; /* Оранжевий фон при наведенні */
-  color: white; /* Білий текст при наведенні */
+  background-color: #a9c623; 
+  color: white; 
 }
 
 @media (max-width: 1024px) {
   .organic__products {
-    grid-template-columns: repeat(2, 1fr); /* 2 продукти в ряд на середніх екранах */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 @media (max-width: 768px) {
   .organic__products {
-    grid-template-columns: 1fr; /* 1 продукт в ряд на мобільних екранах */
+    grid-template-columns: 1fr; 
   }
 }
 
