@@ -11,12 +11,15 @@
 :root {
   --text-color-dark: #333333;
   --text-color-light: #707070;
+  --text-color-medium: #555;
+  --text-color-darkest: #050200;
   --cta-color: #f69946;
-  --cta-color-hover:#c4661a;
+  --cta-color-hover: #c4661a;
   --accent-color: #a9c623;
   --accent-color-hover: #94af16;
   --color-bg-light: #fbf4f0;
   --links-bg: #a49d98;
+  --orange-primary: #ff6f00;
   --text-light-color: #ffffff;
   --error-color: red;
   scroll-behavior: smooth;
