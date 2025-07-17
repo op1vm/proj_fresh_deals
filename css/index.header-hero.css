@@ -8,6 +8,9 @@
       padding: 190px 0 270px;
       background-position: 50%;
     }
+    @media (min-width: 992px) {
+      padding: 250px 0 330px;
+    }
     .header__label {
       color: var(--cta-color);
       font-weight: 600;
@@ -19,12 +22,19 @@
       line-height: 61.2px;
       display: flex;
       flex-direction: column;
-      font-weight: 500;
+      font-weight: 700;
       margin: 0;
       @media (min-width: 768px) {
         font-size: 4rem;
         line-height: 70.4px;
         max-width: 400px;
+      }
+      @media (min-width: 992px) {
+        font-size: 4.5rem;
+        line-height: 79.2px;
+      }
+      @media (min-width: 1280px) {
+        max-width: 100%;
       }
       .header__title--accent {
         color: var(--accent-color);
@@ -45,6 +55,7 @@
         text-decoration: none;
         border-radius: 5px;
         border: 2px solid var(--accent-color);
+        letter-spacing: 0.4px;
         &.header__link-cta {
           color: var(--text-light-color);
           background-color: var(--accent-color);
