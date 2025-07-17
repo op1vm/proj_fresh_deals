@@ -30,6 +30,10 @@ body {
   font-family: "Source Sans 3";
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
