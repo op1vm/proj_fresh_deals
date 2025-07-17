@@ -1,6 +1,6 @@
 .cart-modal {
   padding: 16px;
-  background-color: var(--text-color-on-dark-bgr);
+  background-color: var(--bg-color-light);
   max-width: 480px;
   margin: 0 auto;
   font-family: "Source Sans 3", sans-serif;
