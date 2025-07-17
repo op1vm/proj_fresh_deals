@@ -19,6 +19,8 @@
       line-height: 61.2px;
       display: flex;
       flex-direction: column;
+      font-weight: 500;
+      margin: 0;
       @media (min-width: 768px) {
         font-size: 4rem;
         line-height: 70.4px;
