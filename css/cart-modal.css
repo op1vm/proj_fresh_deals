@@ -1,6 +1,6 @@
 .cart-modal {
   padding: 16px;
-  background-color: var(--color-white);
+  background-color: var(--text-light-color);
   max-width: 480px;
   margin: 0 auto;
   font-family: "Source Sans 3", sans-serif;
@@ -121,7 +121,7 @@
 }
 
 .cart-modal__required {
-  color: var(--color-red);
+  color: var(--error-color);
 }
 
 .cart-modal__input,
@@ -145,7 +145,7 @@
   border-radius: 6px;
   padding: 12px;
   font-size: 1rem;
-  color: var(--color-white);
+  color: var(--text-light-color);
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s;
