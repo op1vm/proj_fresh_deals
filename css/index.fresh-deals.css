@@ -58,7 +58,7 @@
   justify-content: center;
 
   .fresh-deals__product {
-    background-color: var(--color-bg-light);
+    background-color: var(--bg-color-light);
     text-align: center;
 
     .fresh-deals__image {

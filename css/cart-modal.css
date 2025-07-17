@@ -44,7 +44,7 @@
   align-items: center;
   gap: 12px;
   padding: 8px 0;
-  border-bottom: 1px solid var(--color-bg-light);
+  border-bottom: 1px solid var(--bg-color-light);
 }
 
 .cart-modal__product-img {
@@ -129,7 +129,7 @@
   width: 100%;
   padding: 10px;
   border: none;
-  background-color: var(--color-bg-light);
+  background-color: var(--bg-color-light);
   border-radius: 4px;
   font-size: 0.95rem;
   color: var(--text-color-dark);

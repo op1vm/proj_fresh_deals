@@ -43,7 +43,7 @@
 
     .top-picks__left-btn,
     .top-picks__right-btn {
-      background-color: var(--text-light-color);
+      background-color: var(--text-color-on-dark-bg);
       color: var(--text-color-light);
       border: none;
       border-radius: 50%;
@@ -69,7 +69,7 @@
       overflow-x: auto;
 
       .top-picks__card {
-        background-color: var(--color-bg-light);
+        background-color: var(--bg-color-light);
         padding: 1rem;
         width: 250px;
         height: 430px;
@@ -97,7 +97,7 @@
           display: block;
           margin: 1.5rem auto 0;
           color: var(--cta-color);
-          background-color: var(--color-bg-light);
+          background-color: var(--bg-color-light);
           border: 2px solid var(--accent-color);
           height: 3rem;
           width: 6rem;
@@ -107,7 +107,7 @@
           box-shadow: none;
           outline: none;
           &:hover {
-            color: var(--text-light-color);
+            color: var(--text-color-on-dark-bg);
             background-color: var(--accent-color);
             box-shadow: none;
             border: 1px solid var(--accent-color);

@@ -57,7 +57,7 @@
         border: 2px solid var(--accent-color);
         letter-spacing: 0.4px;
         &.header__link-cta {
-          color: var(--text-light-color);
+          color: var(--text-color-on-dark-bg);
           background-color: var(--accent-color);
           box-shadow: rgba(39, 37, 40, 0.28) 0px 3px 10px 0px;
           transition: all ease-in 0.2s;
@@ -66,7 +66,7 @@
             border-color: var(--accent-color-hover);
           }
           .header__link-icon {
-            fill: var(--text-light-color);
+            fill: var(--text-color-on-dark-bg);
           }
         }
         &.header__link--transparent {
@@ -75,9 +75,9 @@
           &:hover {
             background-color: var(--accent-color-hover);
             border-color: var(--accent-color-hover);
-            color: var(--text-light-color);
+            color: var(--text-color-on-dark-bg);
             .header__link-icon {
-              fill: var(--text-light-color);
+              fill: var(--text-color-on-dark-bg);
             }
           }
           .header__link-icon {
