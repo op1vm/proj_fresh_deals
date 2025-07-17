@@ -7,7 +7,7 @@
     padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: var(--color-bg-light);
+    background-color: var(--bg-color-light);
     font-family: "Source Sans 3", sans-serif;
     display: flex;
     flex-direction: column;
@@ -238,7 +238,7 @@
   .our-app__text-content {
     align-items: flex-start;
   }
-  
+
   .our-app__stores {
     flex-direction: row;
     justify-content: flex-start;

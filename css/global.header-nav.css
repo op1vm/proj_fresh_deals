@@ -3,7 +3,7 @@
     display: none;
     @media (min-width: 992px) {
       display: block;
-      background-color: var(--color-bg-light);
+      background-color: var(--bg-color-light);
     }
     .header__nav-wrapper {
       display: flex;
