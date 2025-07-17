@@ -39,7 +39,7 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin-top: 2rem;
+    margin: 3rem 0;
 
     .top-picks__left-btn,
     .top-picks__right-btn {
@@ -71,7 +71,8 @@
       .top-picks__card {
         background-color: var(--color-bg-light);
         padding: 1rem;
-        width: 200px;
+        width: 250px;
+        height: 430px;
         flex: 0 0 auto;
         text-align: center;
 
@@ -84,6 +85,7 @@
           font-size: 1rem;
           font-weight: 600;
           color: var(--text-color-dark);
+          margin-top: 2rem;
         }
 
         .top-picks__price {
@@ -93,7 +95,7 @@
 
         button {
           display: block;
-          margin: 1rem auto 0;
+          margin: 1.5rem auto 0;
           color: var(--cta-color);
           background-color: var(--color-bg-light);
           border: 2px solid var(--accent-color);
