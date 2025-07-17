@@ -44,6 +44,20 @@
 .partners__button--next .partners__arrow-icon {
   transform: none;
 }
+
+.partners__section {
+  display: block;
+  box-sizing: border-box;
+  transform: translateZ(0);
+  padding-top: 50;
+  padding-bottom: 50;
+}
+
+.partners__content {
+margin: 14;
+padding: 40;
+}
+
 .partners__list {
   display: flex;
   justify-content: center;
