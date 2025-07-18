@@ -11,12 +11,27 @@
 :root {
   --text-color-dark: #333333;
   --text-color-light: #707070;
+  --text-color-medium: #555;
+  --text-color-darkest: #050200;
+  --text-color-on-dark-bg: #ffffff;
   --cta-color: #f69946;
+  --cta-color-hover: #c4661a;
   --accent-color: #a9c623;
   --accent-color-hover: #94af16;
-  --color-bg-light: #fbf4f0;
+  --bg-color-light: #fbf4f0;
+  --links-bg: #a49d98;
+  --border-color-light: #c5cbd6;
+  --error-color: red;
   scroll-behavior: smooth;
   font-family: "Source Sans 3", sans-serif;
+}
+
+body {
+  font-family: "Source Sans 3";
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 img {
