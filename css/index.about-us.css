@@ -51,7 +51,7 @@
 .about-us__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 4px 3px;
+  gap: 6px 8px;
   margin-bottom: 20px;
   list-style: none;
   align-items: center;
