@@ -26,15 +26,40 @@
   font-weight: 600;
   font-size: 14px;
   margin-bottom: 12px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
 }
+
+.about-us__title::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--cta-color-hover);
+  transition-duration: 0.5s;
+}
+.about-us__title:hover {
+  color: var(--cta-color-hover);
+}
+
+.about-us__title:hover::after {
+  width: 100%;
+}
+
+
 
 .about-us__subtitle {
   font-weight: 700;
   line-height: 1.2;
   font-size: clamp(
     34px,         /* Мінімальний розмір шрифту */
-    calc(34px + (42 - 34) * ((100vw - 320px) / (1200 - 320))),  /* Адаптивний розмір */
-    42px);        /* Максимальний розмір шрифту */
+      calc(34px + (42 - 34) * ((100vw - 320px) / (1200 - 320))),   /* Адаптивний розмір */
+    42px);       /* Максимальний розмір шрифту */
 
   margin-bottom: 20px;
   display: block;
@@ -68,14 +93,32 @@
 }
 
 .about-us__item {
-  display: flex;
   align-items: center;
   font-size: 16px;
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
 }
 
 .about-us__item::before {
   content: url("../img/about-us/round-tick.svg");
   margin-right: 4px;
+}
+
+.about-us__item::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color-hover);
+  transition-duration: 0.5s;
+}
+
+.about-us__item:hover::after {
+  width: 100%;
 }
 
 .about-us__text {
