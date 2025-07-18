@@ -49,13 +49,14 @@
   display: block;
   box-sizing: border-box;
   transform: translateZ(0);
-  padding-top: 50;
-  padding-bottom: 50;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .partners__content {
-margin: 14;
-padding: 40;
+margin: 14px;
+padding-left: 40px;
+padding-right: 40px;
 }
 
 .partners__list {
@@ -78,5 +79,4 @@ padding: 40;
   display: block;
   max-width: 100%;
   height: auto;
-  filter: brightness(0) invert(1);
 }
