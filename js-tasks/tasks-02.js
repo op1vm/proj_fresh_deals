@@ -9,11 +9,11 @@ function makeNegative(num) {
 }
 _task.3:
 function move (position, roll) {
-  return position + (roll * 2);
+  return position + roll * 2;
 }
 _task.4:
 function greet(name, owner) {
-  return name === owner ? 'Hello boss' : 'Hello guest';
+  return (name === owner) ? 'Hello boss' : 'Hello guest';
 }
 _task.5:
 function litres(time) {
