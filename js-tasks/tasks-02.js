@@ -1,11 +1,11 @@
-/*bobreshova_ira
+/*
 _task.1:
 function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
   return laLigaGoals+copaDelReyGoals+championsLeagueGoals;
 }
 _task.2:
 function makeNegative(num) {
-  return num > 0 ? -num:num;
+  return (num > 0) ? -num:num;
 }
 _task.3:
 function move (position, roll) {
