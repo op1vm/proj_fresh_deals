@@ -9,7 +9,7 @@ function makeNegative(num) {
 }
 _task.3:
 function move (position, roll) {
-  return position+(roll*2);
+  return position + (roll * 2);
 }
 _task.4:
 function greet(name, owner) {
