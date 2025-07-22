@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color-dark: #333333;
+  --text-color-light: #707070;
+  --text-color-medium: #555;
+  --text-color-darkest: #050200;
+  --text-color-on-dark-bg: #ffffff;
+  --cta-color: #f69946;
+  --cta-color-hover: #c4661a;
+  --accent-color: #a9c623;
+  --accent-color-hover: #94af16;
+  --bg-color-light: #fbf4f0;
+  --bg--color--form:rgba(51, 51, 51, 0.12);
+  --links-bg: #a49d98;
+  --border-color-light: #c5cbd6;
+  --error-color: red;
+  --orange-primary: #f69946;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Source Sans 3";
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Istok Web", sans-serif;
+  color: var(--text-color-dark);
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  @media (min-width: 768px) {
+    padding-inline: 32px;
+  }
+  @media (min-width: 992px) {
+    padding-inline: 40px;
+  }
+  @media (min-width: 1280px) {
+    padding-inline: 15px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
