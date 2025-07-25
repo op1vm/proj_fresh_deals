@@ -39,13 +39,12 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin-top: 2rem;
+    margin: 3rem 0;
 
     .top-picks__left-btn,
     .top-picks__right-btn {
-      background-color: var(--color-white);
-      color: var(--text-color-dark);
-      font-size: 1.5rem;
+      background-color: var(--text-color-on-dark-bg);
+      color: var(--text-color-light);
       border: none;
       border-radius: 50%;
       width: 40px;
@@ -55,10 +54,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      &:hover {
-            color: var(--color-white);
-            background-color: var(--accent-color);
-          }
+      transition: background-color 0.3s, color 0.3s;
+
+      .top-picks__icon {
+        width: 48px;
+        height: 48px;
+      }
     }
 
     .top-picks__wheel {
@@ -68,15 +69,23 @@
       overflow-x: auto;
 
       .top-picks__card {
-        background-color: var(--color-bg-light);
+        background-color: var(--bg-color-light);
         padding: 1rem;
-        width: 200px;
+        width: 250px;
+        height: 430px;
         flex: 0 0 auto;
         text-align: center;
 
         h3,
         p {
           text-align: center;
+        }
+
+        h3 {
+          font-size: 1rem;
+          font-weight: 600;
+          color: var(--text-color-dark);
+          margin-top: 2rem;
         }
 
         .top-picks__price {
@@ -86,16 +95,22 @@
 
         button {
           display: block;
-          margin: 1rem auto 0;
+          margin: 1.5rem auto 0;
           color: var(--cta-color);
-          background-color: var(--color-bg-light);
-          border-color: var(--accent-color);
-          height: 2rem;
+          background-color: var(--bg-color-light);
+          border: 2px solid var(--accent-color);
+          height: 3rem;
           width: 6rem;
           border-radius: 5px;
+          font-size: 0.75rem;
+          font-weight: bold;
+          box-shadow: none;
+          outline: none;
           &:hover {
-            color: var(--color-white);
+            color: var(--text-color-on-dark-bg);
             background-color: var(--accent-color);
+            box-shadow: none;
+            border: 1px solid var(--accent-color);
           }
         }
       }
