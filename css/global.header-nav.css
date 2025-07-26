@@ -117,10 +117,12 @@
     opacity: 1;
     visibility: visible;
     position: fixed;
+    z-index: 2;
     left: 0;
     top: 104px;
     width: 100%;
-    background-color: var(--text-light-color);
+    padding-top: 20px;
+    background-color: var(--text-color-on-dark-bg);
   }
   .header__burger.is-active .header__burger-line:nth-child(1) {
     transform: translateY(7px) rotate(45deg);

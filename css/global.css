@@ -19,12 +19,13 @@
   --accent-color: #a9c623;
   --accent-color-hover: #94af16;
   --bg-color-light: #fbf4f0;
+  --bg--color--form:rgba(51, 51, 51, 0.12);
   --links-bg: #a49d98;
   --border-color-light: #c5cbd6;
   --error-color: red;
   --color-icon-fill: #fff;
+  --orange-primary: #f69946;
   scroll-behavior: smooth;
-  font-family: "Source Sans 3", sans-serif;
 }
 
 body {
@@ -42,6 +43,7 @@ img {
 }
 
 h1,
+h2,
 h3,
 h4,
 h5,
@@ -50,17 +52,33 @@ h6 {
   color: var(--text-color-dark);
 }
 
+ul,
+ol {
+  padding: 0;
+}
+
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
+  margin-inline: auto;
+  padding-inline: 24px;
   @media (min-width: 768px) {
-    padding: 0 32px;
+    padding-inline: 32px;
   }
   @media (min-width: 992px) {
-    padding: 0 40px;
+    padding-inline: 40px;
   }
   @media (min-width: 1280px) {
-    padding: 0 15px;
+    padding-inline: 15px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

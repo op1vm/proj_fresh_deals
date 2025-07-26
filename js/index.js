@@ -1,5 +1,6 @@
 function init() {
   import("./global.header-burger.js");
+  import("./global.header-menu-list.js");
 }
 
 const totalPartials = document.querySelectorAll(
