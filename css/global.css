@@ -22,6 +22,7 @@
   --links-bg: #a49d98;
   --border-color-light: #c5cbd6;
   --error-color: red;
+  --color-icon-fill: #fff;
   scroll-behavior: smooth;
   font-family: "Source Sans 3", sans-serif;
 }
