@@ -7,7 +7,7 @@
   justify-content: space-between;
   gap: 40px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 860px) {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -24,17 +24,42 @@
 .about-us__title {
   color: var(--cta-color);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 12px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
 }
+
+.about-us__title::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--cta-color-hover);
+  transition-duration: 0.5s;
+}
+.about-us__title:hover {
+  color: var(--cta-color-hover);
+}
+
+.about-us__title:hover::after {
+  width: 100%;
+}
+
+
 
 .about-us__subtitle {
   font-weight: 700;
   line-height: 1.2;
   font-size: clamp(
-      34px,                                                           /* Мінімальний розмір шрифту */
-      calc(34px + (42 - 34) * ((100vw - 320px) / (1200 - 320))),      /* Адаптивний розмір */ 
-      42px);                                                          /* Максимальний розмір шрифту */
+    34px,         /* Мінімальний розмір шрифту */
+      calc(34px + (42 - 34) * ((100vw - 320px) / (1200 - 320))),   /* Адаптивний розмір */
+    42px);       /* Максимальний розмір шрифту */
 
   margin-bottom: 20px;
   display: block;
@@ -42,7 +67,7 @@
 }
 
 .about-us__description {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
   color: var(--text-color-dark);
@@ -50,22 +75,50 @@
 
 .about-us__list {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px 5px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px 8px;
   margin-bottom: 20px;
-  padding-left: 0;
   list-style: none;
+  align-items: center;
 
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(3, minmax (0, 1fr));
-    gap: 7px 5px;
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px 3px;
+  }
+
+  @media (min-width: 480px) and (max-width: 1150px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
   }
 }
 
+.about-us__item {
+  align-items: center;
+  font-size: 16px;
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+}
+
 .about-us__item::before {
-  content: url(../img/about-us/tick.svg);
-  background-color: var(--accent-color);
+  content: url("../img/about-us/round-tick.svg");
   margin-right: 4px;
+}
+
+.about-us__item::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color-hover);
+  transition-duration: 0.5s;
+}
+
+.about-us__item:hover::after {
+  width: 100%;
 }
 
 .about-us__text {
@@ -76,8 +129,13 @@
 }
 
 .about-us__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
   padding: 12px 24px;
   background-color: var(--cta-color);
+  color: var(--text-color-on-dark-bg);
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
@@ -89,8 +147,6 @@
   background-color: var(--cta-color-hover);
 }
 
-.about-us__button::after {
-  content:url(../img/about-us/apple-icon.svg);
-  margin-left:3px;
-  background-color:var(--color-white);
+.button__icon {
+  transform: translate(-3px, -3px);
 }

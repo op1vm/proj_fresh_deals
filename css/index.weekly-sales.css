@@ -1,77 +1,54 @@
 .weekly-sales {
-  color: var(--color-white);
-  text-align: left;
+  /*contains 2 items with ads*/
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
   margin: 60px auto;
-  padding: 0 40px;
+  min-height: 277px;
+  font-family: "Istok Web";
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 30px;
+  }
 
-  .weekly-sales__card {
+  .weekly-sales-card {
+    /*contains 3 text elements inside*/
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    width: 100%;
     min-height: 277px;
+    flex: 1;
+    padding: 25px;
     background-position: center;
     background-size: cover;
-    overflow: hidden;
-    margin-bottom: 20px;
+    color: var(--text-color-on-dark-bg);
   }
-  .weekly-sales__card--green {
+  .weekly-sales-card--green {
     background-image: url("../img/weekly-sales/fresh-green-foods.png");
   }
 
-  .weekly-sales__card--orange {
+  .weekly-sales-card--orange {
     background-image: url("../img/weekly-sales/fresh-yellow-foods.png");
   }
 
-  .weekly-sales__text-box {
-    padding: 30px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-
-    .weekly-sales__offer-type {
-      font-size: 1.2rem;
-    }
-    .weekly-sales__badge {
-      font-size: 2.5rem;
-      padding: 20px 0 20px 0;
-    }
-
-    .weekly-sales__link {
-      display: inline;
-      align-items: center;
-      gap: 8px;
-      color: var(--color-white);
-      text-decoration: none;
-    }
-
-    .weekly-sales__link svg {
-      vertical-align: middle;
-    }
+  .weekly-sales-card__offer-type {
+    font-size: 1.2rem;
+    margin-bottom: 0;
   }
-}
-
-@media (min-width: 768px) {
-  .weekly-sales {
-    flex-direction: row;
-    gap: 30px;
-
-    .weekly-sales__card {
-      flex: 1;
-    }
+  .weekly-sales-card__badge {
+    font-size: 2.5rem;
   }
-}
 
-@media (min-width: 1024px) {
-  .weekly-sales {
-    gap: 40px;
+  .weekly-sales-card__link {
+    display: inline;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--text-color-on-dark-bg);
+  }
 
-    .weekly-sales__text-box {
-      padding: 40px;
-    }
+  .weekly-sales-card__link svg {
+    vertical-align: middle;
   }
 }
