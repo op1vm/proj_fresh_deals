@@ -3,15 +3,19 @@ class TopPicksCarousel {
     this.carousel = document.querySelector(selector);
     if (!this.carousel) return;
 
-    this.isAnimating = false;
     this.track = this.carousel.querySelector('.top-picks__wheel');
     this.prevBtn = this.carousel.querySelector('.top-picks__left-btn');
     this.nextBtn = this.carousel.querySelector('.top-picks__right-btn');
 
-    this.originalSlides = Array.from(this.track.children);
+    this.isAnimating = false;
     this.slideWidth = 0;
     this.slidesPerView = this.getSlidesPerView();
-    this.currentIndex = this.slidesPerView;
+
+    // Копія тільки оригінальних слайдів
+    this.originalSlides = Array.from(this.track.children);
+    this.originalSlides.forEach((slide, idx) => {
+      slide.dataset.originalIndex = idx;
+    });
 
     this.init();
   }
@@ -27,7 +31,10 @@ class TopPicksCarousel {
     this.cloneSlides();
     this.setSlideWidth();
     this.track.style.overflow = 'hidden';
+
+    this.currentIndex = this.slidesPerView;
     this.goToSlide(this.currentIndex, false);
+
     this.bindEvents();
     this.enableTouchScroll();
   }
@@ -35,12 +42,23 @@ class TopPicksCarousel {
   cloneSlides() {
     const total = this.originalSlides.length;
 
+    this.track.innerHTML = '';
+
+    // Клони з кінця → на початок
     for (let i = total - this.slidesPerView; i < total; i++) {
       const clone = this.originalSlides[i].cloneNode(true);
       clone.classList.add('top-picks__card--clone');
-      this.track.insertBefore(clone, this.track.firstChild);
+      this.track.appendChild(clone);
     }
 
+    // Оригінали
+    this.originalSlides.forEach((slide) => {
+      const originalClone = slide.cloneNode(true);
+      originalClone.dataset.originalIndex = slide.dataset.originalIndex;
+      this.track.appendChild(originalClone);
+    });
+
+    // Клони з початку → в кінець
     for (let i = 0; i < this.slidesPerView; i++) {
       const clone = this.originalSlides[i].cloneNode(true);
       clone.classList.add('top-picks__card--clone');
@@ -53,11 +71,14 @@ class TopPicksCarousel {
   setSlideWidth() {
     const slide = this.track.querySelector('.top-picks__card');
     if (!slide) return;
-    this.slideWidth = slide.offsetWidth + parseFloat(getComputedStyle(this.track).gap || 0);
+
+    const gap = parseFloat(getComputedStyle(this.track).gap || '0');
+    this.slideWidth = slide.offsetWidth + gap;
   }
 
   goToSlide(index, animate = true) {
     if (!this.slideWidth) this.setSlideWidth();
+
     this.track.style.scrollBehavior = animate ? 'smooth' : 'auto';
     this.track.scrollLeft = index * this.slideWidth;
     this.currentIndex = index;
@@ -72,8 +93,15 @@ class TopPicksCarousel {
 
     this.afterScroll(() => {
       if (this.currentIndex >= this.slides.length - this.slidesPerView) {
-        this.goToSlide(this.slidesPerView, false);
+        this.track.style.scrollBehavior = 'auto';
+        this.currentIndex = this.slidesPerView;
+        this.track.scrollLeft = this.currentIndex * this.slideWidth;
+
+        requestAnimationFrame(() => {
+          this.track.style.scrollBehavior = 'smooth';
+        });
       }
+
       this.isAnimating = false;
     });
   }
@@ -87,8 +115,16 @@ class TopPicksCarousel {
 
     this.afterScroll(() => {
       if (this.currentIndex < this.slidesPerView) {
-        this.goToSlide(this.slides.length - this.slidesPerView * 2, false);
+        this.track.style.scrollBehavior = 'auto';
+
+        this.currentIndex = this.slides.length - this.slidesPerView * 2;
+        this.track.scrollLeft = this.currentIndex * this.slideWidth;
+
+        requestAnimationFrame(() => {
+          this.track.style.scrollBehavior = 'smooth';
+        });
       }
+
       this.isAnimating = false;
     });
   }
@@ -106,34 +142,6 @@ class TopPicksCarousel {
       }
     };
     requestAnimationFrame(checkScroll);
-  }
-
-  bindEvents() {
-    this.nextBtn.addEventListener('click', () => this.nextSlide());
-    this.prevBtn.addEventListener('click', () => this.prevSlide());
-
-    window.addEventListener('resize', () => {
-      const newSlidesPerView = this.getSlidesPerView();
-      if (newSlidesPerView !== this.slidesPerView) {
-        this.slidesPerView = newSlidesPerView;
-        this.track.innerHTML = '';
-        this.originalSlides.forEach((s) => this.track.appendChild(s));
-        this.originalSlides = Array.from(this.track.children);
-        this.cloneSlides();
-        this.setSlideWidth();
-        this.currentIndex = this.slidesPerView;
-        this.goToSlide(this.currentIndex, false);
-      } else {
-        this.setSlideWidth();
-        this.goToSlide(this.currentIndex, false);
-      }
-    });
-
-    this.carousel.setAttribute('tabindex', '0');
-    this.carousel.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') this.prevSlide();
-      if (e.key === 'ArrowRight') this.nextSlide();
-    });
   }
 
   enableTouchScroll() {
@@ -163,6 +171,32 @@ class TopPicksCarousel {
       const approxIndex = Math.round(this.track.scrollLeft / this.slideWidth);
       this.goToSlide(approxIndex);
     }, { passive: true });
+  }
+
+  bindEvents() {
+    this.nextBtn.addEventListener('click', () => this.nextSlide());
+    this.prevBtn.addEventListener('click', () => this.prevSlide());
+
+    window.addEventListener('resize', () => {
+      const newSlidesPerView = this.getSlidesPerView();
+
+      if (newSlidesPerView !== this.slidesPerView) {
+        this.slidesPerView = newSlidesPerView;
+        this.cloneSlides();
+        this.setSlideWidth();
+        this.currentIndex = this.slidesPerView;
+        this.goToSlide(this.currentIndex, false);
+      } else {
+        this.setSlideWidth();
+        this.goToSlide(this.currentIndex, false);
+      }
+    });
+
+    this.carousel.setAttribute('tabindex', '0');
+    this.carousel.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') this.prevSlide();
+      if (e.key === 'ArrowRight') this.nextSlide();
+    });
   }
 }
 
