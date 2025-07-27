@@ -1,6 +1,9 @@
 function init() {
   import("./global.header-burger.js");
   import("./global.header-menu-list.js");
+  import("./index.top-picks.js").then((module) => {
+    module.default();
+  });
 }
 
 const totalPartials = document.querySelectorAll(
