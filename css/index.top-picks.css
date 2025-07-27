@@ -1,4 +1,5 @@
 .top-picks {
+  margin-top: 6rem;
   .top-picks__header-container {
     max-width: 600px;
     margin: auto;
