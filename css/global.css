@@ -23,6 +23,7 @@
   --links-bg: #a49d98;
   --border-color-light: #c5cbd6;
   --error-color: red;
+  --color-icon-fill: #fff;
   --orange-primary: #f69946;
   scroll-behavior: smooth;
 }
