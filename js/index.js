@@ -6,6 +6,7 @@ function init() {
     import("./index.our-app.js");
   });
   import("./index.fresh-deals.js");
+  import("./index.organic.js");
 }
 
 const totalPartials = document.querySelectorAll(
