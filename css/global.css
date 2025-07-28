@@ -82,3 +82,14 @@ ol {
     transform: translateY(0);
   }
 }
+.cart-button {
+  --bs-btn-bg: #ffffff;      /* фон кнопки */
+  --bs-btn-color: #000000;   /* колір іконки або тексту */
+}
+
+/* Дозволимо повне переписання для hover/active */
+.cart-button:hover,
+.cart-button:active {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
