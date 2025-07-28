@@ -49,7 +49,10 @@
     }
   }
 }
-.fresh-deals__grid {
+ .fresh-deals__tab--active{
+  color: var(--text-color-darkest);
+ }
+.fresh-deals__grid .fresh-deals__products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
   gap: 1.5rem;
