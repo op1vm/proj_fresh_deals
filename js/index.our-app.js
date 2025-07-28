@@ -10,3 +10,4 @@ function updateOurAppClock() {
 
 setInterval(updateOurAppClock, 1000);
 document.addEventListener('DOMContentLoaded', updateOurAppClock);
+
