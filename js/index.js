@@ -3,8 +3,8 @@ function init() {
   import("./global.header-menu-list.js");
   import("./index.top-picks.js").then((module) => {
     module.default();
-    import("./index.our-app.js");
   });
+  import("./index.our-app.js");
   import("./index.fresh-deals.js");
   import("./index.organic.js");
 }
