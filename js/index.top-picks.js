@@ -11,7 +11,6 @@ class TopPicksCarousel {
     this.slideWidth = 0;
     this.slidesPerView = this.getSlidesPerView();
 
-    // Копія тільки оригінальних слайдів
     this.originalSlides = Array.from(this.track.children);
     this.originalSlides.forEach((slide, idx) => {
       slide.dataset.originalIndex = idx;
@@ -41,12 +40,18 @@ class TopPicksCarousel {
 
   cloneSlides() {
     const total = this.originalSlides.length;
-
     this.track.innerHTML = '';
 
+    // Гарантуємо, що клонів буде достатньо
+    const extendedSlides = [];
+
+    while (extendedSlides.length < total + this.slidesPerView) {
+      extendedSlides.push(...this.originalSlides);
+    }
+
     // Клони з кінця → на початок
-    for (let i = total - this.slidesPerView; i < total; i++) {
-      const clone = this.originalSlides[i].cloneNode(true);
+    for (let i = extendedSlides.length - this.slidesPerView; i < extendedSlides.length; i++) {
+      const clone = extendedSlides[i].cloneNode(true);
       clone.classList.add('top-picks__card--clone');
       this.track.appendChild(clone);
     }
@@ -60,7 +65,7 @@ class TopPicksCarousel {
 
     // Клони з початку → в кінець
     for (let i = 0; i < this.slidesPerView; i++) {
-      const clone = this.originalSlides[i].cloneNode(true);
+      const clone = extendedSlides[i].cloneNode(true);
       clone.classList.add('top-picks__card--clone');
       this.track.appendChild(clone);
     }
@@ -88,7 +93,7 @@ class TopPicksCarousel {
     if (this.isAnimating) return;
     this.isAnimating = true;
 
-    this.currentIndex++;
+    this.currentIndex += 1;
     this.goToSlide(this.currentIndex);
 
     this.afterScroll(() => {
@@ -110,21 +115,21 @@ class TopPicksCarousel {
     if (this.isAnimating) return;
     this.isAnimating = true;
 
-    this.currentIndex--;
+    this.currentIndex -= 1;
     this.goToSlide(this.currentIndex);
 
     this.afterScroll(() => {
       if (this.currentIndex < this.slidesPerView) {
         this.track.style.scrollBehavior = 'auto';
 
-        this.currentIndex = this.slides.length - this.slidesPerView * 2;
+        // Переміщуємося в "дзеркальну" позицію в оригінальних слайдах
+        this.currentIndex = this.currentIndex + this.originalSlides.length;
         this.track.scrollLeft = this.currentIndex * this.slideWidth;
 
         requestAnimationFrame(() => {
           this.track.style.scrollBehavior = 'smooth';
         });
       }
-
       this.isAnimating = false;
     });
   }
@@ -149,28 +154,40 @@ class TopPicksCarousel {
     let scrollStart = 0;
     let isDragging = false;
 
-    this.track.addEventListener('touchstart', (e) => {
-      if (e.touches.length !== 1) return;
-      startX = e.touches[0].clientX;
-      scrollStart = this.track.scrollLeft;
-      isDragging = true;
-      this.track.style.scrollBehavior = 'auto';
-    }, { passive: true });
+    this.track.addEventListener(
+      'touchstart',
+      (e) => {
+        if (e.touches.length !== 1) return;
+        startX = e.touches[0].clientX;
+        scrollStart = this.track.scrollLeft;
+        isDragging = true;
+        this.track.style.scrollBehavior = 'auto';
+      },
+      { passive: true }
+    );
 
-    this.track.addEventListener('touchmove', (e) => {
-      if (!isDragging) return;
-      const currentX = e.touches[0].clientX;
-      const deltaX = startX - currentX;
-      this.track.scrollLeft = scrollStart + deltaX;
-    }, { passive: true });
+    this.track.addEventListener(
+      'touchmove',
+      (e) => {
+        if (!isDragging) return;
+        const currentX = e.touches[0].clientX;
+        const deltaX = startX - currentX;
+        this.track.scrollLeft = scrollStart + deltaX;
+      },
+      { passive: true }
+    );
 
-    this.track.addEventListener('touchend', () => {
-      if (!isDragging) return;
-      isDragging = false;
+    this.track.addEventListener(
+      'touchend',
+      () => {
+        if (!isDragging) return;
+        isDragging = false;
 
-      const approxIndex = Math.round(this.track.scrollLeft / this.slideWidth);
-      this.goToSlide(approxIndex);
-    }, { passive: true });
+        const approxIndex = Math.round(this.track.scrollLeft / this.slideWidth);
+        this.goToSlide(approxIndex);
+      },
+      { passive: true }
+    );
   }
 
   bindEvents() {
@@ -200,6 +217,6 @@ class TopPicksCarousel {
   }
 }
 
-export default function initTopPicksCarousel() {
+(function initTopPicksCarousel() {
   new TopPicksCarousel('.top-picks');
-}
+})();
