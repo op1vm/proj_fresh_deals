@@ -1,5 +1,12 @@
 function init() {
   import("./global.header-burger.js");
+  import("./global.header-menu-list.js");
+  import("./index.top-picks.js").then((module) => {
+    module.default();
+  });
+  import("./index.our-app.js");
+  import("./index.fresh-deals.js");
+  import("./index.organic.js");
 }
 
 const totalPartials = document.querySelectorAll(

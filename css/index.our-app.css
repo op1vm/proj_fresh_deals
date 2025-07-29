@@ -1,3 +1,15 @@
+#our-app-clock {
+  position: absolute;
+  top: -130px;
+  left: 100%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  color: var(--accent-color);
+  padding: 4px 12px;
+  width: max-content;
+  z-index: 10;
+  font-family: "Source Sans 3", sans-serif;
+}
 .our-app-container {
   margin-top: 60px;
 
@@ -191,6 +203,7 @@
     }
   }
 }
+
 @media (min-width: 768px) {
   .our-app {
     display: grid;
@@ -247,4 +260,17 @@
   .our-app__mockup {
     justify-self: center;
   }
+}
+
+#our-app-clock {
+  position: absolute;
+  top: 23px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: var(--accent-color);
+  padding: 4px 12px;
+  width: max-content;
+  z-index: 10;
+  font-family: "Source Sans 3", sans-serif;
 }
