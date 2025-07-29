@@ -1,0 +1,13 @@
+.testimonials__header {
+  text-align: center;
+  color: var(--orange-primary);
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.testimonials__subheader{
+  text-align: center;
+  color: var(--text-color-darkest);
+  margin-bottom: 10px;
+  font-size: 28px;
+}
