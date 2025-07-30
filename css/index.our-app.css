@@ -1,4 +1,8 @@
-#our-app-clock {
+
+.our-app-container {
+  margin-top: 60px;
+
+  #our-app-clock {
   position: absolute;
   top: -130px;
   left: 100%;
@@ -10,8 +14,6 @@
   z-index: 10;
   font-family: "Source Sans 3", sans-serif;
 }
-.our-app-container {
-  margin-top: 60px;
 
   .our-app {
     position: relative;
@@ -147,13 +149,12 @@
     object-fit: contain;
   }
 
-  .our-app__phone-background {
+    .our-app__phone-background {
     z-index: 1;
     transform: scale(2.5) rotate(-8deg);
-    opacity: 0.7;
-  }
-
-  .our-app__phone-img {
+    opacity: 0.8;
+    background: var(--bg-color-light);
+  }  .our-app__phone-img {
     z-index: 2;
     transform: scale(0.9);
   }
@@ -162,6 +163,111 @@
     z-index: 3;
     pointer-events: none;
   }
+
+  .phone-menu {
+    display: none;
+  }
+
+  @media (min-width: 1025px) {
+    .phone-menu {
+      display: block;
+      position: absolute;
+      top: 47px;
+      right: 33px;
+      z-index: 100;
+    }
+
+    .phone-menu__button {
+      width: 32px;
+      height: 28px;
+      position: relative;
+      background: var(--text-color-on-dark-bg);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      z-index: 102;
+      padding: 15px;
+    }
+
+    .phone-menu__button span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: var(--accent-color);
+      transition: .25s ease-in-out;
+      left: 0;
+    }
+
+    .phone-menu__button span:nth-child(1) {
+      top: 6px;
+    }
+
+    .phone-menu__button span:nth-child(2) {
+      top: 16px;
+    }
+
+    .phone-menu__button span:nth-child(3) {
+      top: 26px;
+    }
+
+    .phone-menu__button.active span:nth-child(1) {
+      top: 16px;
+      transform: rotate(45deg);
+    }
+
+    .phone-menu__button.active span:nth-child(2) {
+      width: 0;
+      opacity: 0;
+    }
+
+    .phone-menu__button.active span:nth-child(3) {
+      top: 16px;
+      transform: rotate(-45deg);
+    }
+
+    .phone-menu__nav {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: auto;
+      background: var(--bg-color-light);
+      padding: 80px 25px 25px;
+      transition: .3s;
+      border-radius: 12px 0 0 12px;
+      box-shadow: -2px 0 15px var(--text-color-light);
+      z-index: 101;
+    }
+
+    .phone-menu__nav.active {
+      right: 0;
+    }
+
+    .phone-menu__nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .phone-menu__nav li {
+      margin-bottom: 20px;
+    }
+
+    .phone-menu__nav a {
+      color: var(--text-color-dark);
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      transition: .3s;
+      display: block;
+      padding: 8px 0;
+    }
+
+    .phone-menu__nav a:hover {
+      color: var(--accent-color);
+      transform: translateX(5px);
+    }
 
   @media (min-width: 1025px) {
     .our-app {
@@ -202,68 +308,8 @@
       width: 230px;
     }
   }
-}
 
-@media (min-width: 768px) {
-  .our-app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 40px;
-    padding: 60px 40px;
-    text-align: left;
-  }
-
-  .our-app__text-content,
-  .our-app__mockup {
-    align-items: flex-start;
-  }
-
-  .our-app__feature {
-    flex-direction: row;
-    text-align: left;
-    gap: 16px;
-  }
-
-  .our-app__feature-text {
-    max-width: none;
-  }
-
-  .our-app__stores {
-    justify-content: flex-start;
-  }
-
-  .our-app__mockup {
-    width: 200px;
-    justify-self: center;
-  }
-}
-
-@media (min-width: 1024px) {
-  .our-app {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    align-items: center;
-    gap: 60px;
-    text-align: left;
-  }
-
-  .our-app__text-content {
-    align-items: flex-start;
-  }
-
-  .our-app__stores {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-
-  .our-app__mockup {
-    justify-self: center;
-  }
-}
-
-#our-app-clock {
-  position: absolute;
+  #our-app-clock {
   top: 23px;
   left: 50%;
   transform: translateX(-50%);
@@ -274,3 +320,8 @@
   z-index: 10;
   font-family: "Source Sans 3", sans-serif;
 }
+}
+}
+
+
+

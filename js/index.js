@@ -5,6 +5,7 @@ function init() {
   import("./index.our-app.js");
   import("./index.fresh-deals.js");
   import("./index.organic.js");
+  import("./index.phone-burger-menu.js");
 }
 
 const totalPartials = document.querySelectorAll(
