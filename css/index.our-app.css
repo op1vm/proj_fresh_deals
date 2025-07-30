@@ -227,19 +227,20 @@
     .phone-menu__nav {
       position: fixed;
       top: 0;
-      right: -250px;
+      right: -250pxgit ;
       width: 250px;
       height: auto;
       background: var(--bg-color-light);
       padding: 80px 25px 25px;
-      transition: .3s;
+      transition: all .3s ease;
       border-radius: 12px 0 0 12px;
-      box-shadow: -2px 0 15px var(--text-color-light);
+      box-shadow: none;
       z-index: 101;
     }
 
     .phone-menu__nav.active {
       right: 0;
+      box-shadow: -2px 0 15px var(--text-color-light);
     }
 
     .phone-menu__nav ul {
