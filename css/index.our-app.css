@@ -7,7 +7,7 @@
   top: -130px;
   left: 100%;
   transform: translateX(-50%);
-  font-size: 30px;
+  font-size: 25px;
   color: var(--accent-color);
   padding: 4px 12px;
   width: max-content;
@@ -151,9 +151,7 @@
 
     .our-app__phone-background {
     z-index: 1;
-    transform: scale(2.5) rotate(-8deg);
-    opacity: 0.8;
-    background: var(--bg-color-light);
+    transform: scale(2.5) 
   }  .our-app__phone-img {
     z-index: 2;
     transform: scale(0.9);
