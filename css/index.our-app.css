@@ -278,7 +278,7 @@
       grid-template-columns: repeat(2, max-content);
       align-items: center;
       justify-content: center;
-      gap: 120px;
+      gap: 0px;
       text-align: left;
     }
 
