@@ -227,7 +227,7 @@
     .phone-menu__nav {
       position: fixed;
       top: 0;
-      right: -250pxgit ;
+      right: -250px;
       width: 250px;
       height: auto;
       background: var(--bg-color-light);
