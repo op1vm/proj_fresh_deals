@@ -170,8 +170,8 @@
     .phone-menu {
       display: block;
       position: absolute;
-      top: 47px;
-      right: 33px;
+      top: 47px; 
+      right: 33px; 
       z-index: 100;
     }
 
@@ -226,8 +226,8 @@
 
     .phone-menu__nav {
       position: fixed;
-      top: 0;
-      right: -250px;
+      top: 250px; 
+      right: -250px; 
       width: 250px;
       height: auto;
       background: var(--bg-color-light);
@@ -239,7 +239,7 @@
     }
 
     .phone-menu__nav.active {
-      right: 0;
+      right: 0; 
       box-shadow: -2px 0 15px var(--text-color-light);
     }
 
