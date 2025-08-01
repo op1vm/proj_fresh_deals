@@ -26,6 +26,7 @@
   --color-icon-fill: #fff;
   --orange-primary: #f69946;
   scroll-behavior: smooth;
+  --transition-duration: 0.5s ease;
 }
 
 body {
@@ -81,4 +82,15 @@ ol {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.cart-modal__toggle-btn {
+  --bs-btn-bg: #ffffff;      /* фон кнопки */
+  --bs-btn-color: #000000;   /* колір іконки або тексту */
+}
+
+/* Дозволимо повне переписання для hover/active */
+.cart-modal__toggle-btn:hover,
+.cart-modal__toggle-btn:active {
+  background-color: #ffffff !important;
+  color: #000000 !important;
 }

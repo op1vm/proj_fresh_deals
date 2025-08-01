@@ -1,3 +1,4 @@
+
 .our-app-container {
   margin-top: 60px;
 
@@ -103,7 +104,7 @@
     line-height: 1.5;
   }
 
-  .our-app__stores {
+  .our-app__stores  {
     display: flex;
     justify-content: flex-start;
     gap: 16px;
@@ -111,7 +112,13 @@
     flex-direction: column;
   }
 
-  .our-app__stores-link img {
+  .our-app__stores-link :hover {
+  box-shadow: 0 0 12px var(--accent-color);
+}
+
+  .our-app__stores-link img  {
+    color: var(--accent-color);
+    transform: translateX(5px);
     height: 40px;
     width: auto;
     border-radius: 4px;
@@ -123,6 +130,7 @@
     width: 100px;
     aspect-ratio: 130 / 281;
     align-self: center;
+    z-index: 1;
   }
 
   .our-app__phone-background,
@@ -135,13 +143,10 @@
     object-fit: contain;
   }
 
-  .our-app__phone-background {
+    .our-app__phone-background {
     z-index: 1;
-    transform: scale(2.5) rotate(-8deg);
-    opacity: 0.7;
-  }
-
-  .our-app__phone-img {
+    transform: scale(2.5) 
+  }  .our-app__phone-img {
     z-index: 2;
     transform: scale(0.9);
   }
@@ -149,6 +154,130 @@
   .our-app__phone-frame {
     z-index: 3;
     pointer-events: none;
+  }
+
+  .phone-menu {
+    display: none;
+  }
+
+  @media (min-width: 1920px) and (max-width: 1920px) {
+    .phone-menu {
+      display: block;
+      position: absolute;
+      top: 47px;
+      right: 33px;
+      z-index: 100;
+    }
+
+    .phone-menu__button {
+      width: 32px;
+      height: 28px;
+      position: relative;
+      background: var(--text-color-on-dark-bg);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      z-index: 102;
+      padding: 15px;
+      left: 147px;
+      top: 25px;
+    }
+
+
+    .phone-menu__button span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: var(--accent-color);
+      transition: .25s ease-in-out;
+      left: 0;
+    }
+
+    .phone-menu__button span:nth-child(1) {
+      top: 6px;
+    }
+
+    .phone-menu__button span:nth-child(2) {
+      top: 16px;
+    }
+
+    .phone-menu__button span:nth-child(3) {
+      top: 26px;
+    }
+
+    .phone-menu__button.active span:nth-child(1) {
+      top: 16px;
+      transform: rotate(45deg);
+    }
+
+    .phone-menu__button.active span:nth-child(2) {
+      width: 0;
+      opacity: 0;
+    }
+
+    .phone-menu__button.active span:nth-child(3) {
+      top: 16px;
+      transform: rotate(-45deg);
+    }
+
+
+.our-app {
+  position: relative;
+}
+
+.phone-menu {
+  position: absolute;
+  z-index: 101; 
+  top: 127px;
+  right: 637px;
+}
+
+.phone-menu__nav {
+  position: sticky;
+  top: 250px; 
+  height: 400px;
+  width: 190px;
+  background: var(--text-color-on-dark-bg);
+  padding: 80px 25px 25px;
+  border-radius: 12px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity .3s ease, visibility .3s ease;
+}
+
+.phone-menu__nav.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+    .phone-menu__nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .phone-menu__nav li {
+      margin-bottom: 20px;
+    }
+
+    .phone-menu__nav a {
+      color: var(--text-color-dark);
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      transition: .3s;
+      display: block;
+      padding: 8px 0;
+    }
+
+    .phone-menu__nav a:hover {
+      color: var(--accent-color);
+      transform: translateX(5px);
+    }
   }
 
   @media (min-width: 1025px) {
@@ -161,7 +290,7 @@
       grid-template-columns: repeat(2, max-content);
       align-items: center;
       justify-content: center;
-      gap: 120px;
+      gap: 0px;
       text-align: left;
     }
 
@@ -191,60 +320,7 @@
     }
   }
 }
-@media (min-width: 768px) {
-  .our-app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 40px;
-    padding: 60px 40px;
-    text-align: left;
-  }
 
-  .our-app__text-content,
-  .our-app__mockup {
-    align-items: flex-start;
-  }
 
-  .our-app__feature {
-    flex-direction: row;
-    text-align: left;
-    gap: 16px;
-  }
 
-  .our-app__feature-text {
-    max-width: none;
-  }
 
-  .our-app__stores {
-    justify-content: flex-start;
-  }
-
-  .our-app__mockup {
-    width: 200px;
-    justify-self: center;
-  }
-}
-
-@media (min-width: 1024px) {
-  .our-app {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    align-items: center;
-    gap: 60px;
-    text-align: left;
-  }
-
-  .our-app__text-content {
-    align-items: flex-start;
-  }
-
-  .our-app__stores {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-
-  .our-app__mockup {
-    justify-self: center;
-  }
-}
