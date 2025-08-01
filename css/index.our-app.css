@@ -2,19 +2,6 @@
 .our-app-container {
   margin-top: 60px;
 
-  #our-app-clock {
-  position: absolute;
-  top: -130px;
-  left: 100%;
-  transform: translateX(-50%);
-  font-size: 25px;
-  color: var(--accent-color);
-  padding: 4px 12px;
-  width: max-content;
-  z-index: 10;
-  font-family: "Source Sans 3", sans-serif;
-}
-
   .our-app {
     position: relative;
     padding-top: 50px;
@@ -167,7 +154,7 @@
     display: none;
   }
 
-  @media (min-width: 1025px) {
+  @media (min-width: 1920px) and (max-width: 1920px) {
     .phone-menu {
       display: block;
       position: absolute;
@@ -285,6 +272,7 @@
       color: var(--accent-color);
       transform: translateX(5px);
     }
+  }
 
   @media (min-width: 1025px) {
     .our-app {
@@ -325,20 +313,8 @@
       width: 230px;
     }
   }
+}
 
-  #our-app-clock {
-  top: 23px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 20px;
-  color: var(--accent-color);
-  padding: 4px 12px;
-  width: max-content;
-  z-index: 10;
-  font-family: "Source Sans 3", sans-serif;
-}
-}
-}
 
 
 
