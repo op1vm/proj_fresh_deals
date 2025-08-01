@@ -39,6 +39,7 @@
   padding-bottom: 0.5rem;
   width: 1161px; 
   margin: 0 auto;
+  position: relative;
 
   .fresh-deals__indicator {
   position: absolute;
@@ -48,7 +49,7 @@
   width: 0;
   background-color: var(--cta-color);
   transition: all 0.3s ease;
-  border-radius: 2px;
+  border-radius: 1px;
   
 }
   .fresh-deals__tab {
@@ -77,6 +78,7 @@
   height: 2px;
   background-color: var(--cta-color);
   border-radius: 2px;
+  transition: all 0.3s ease;
 }
 .fresh-deals__grid .fresh-deals__products {
   display: grid;
@@ -157,4 +159,11 @@
     text-align: center;
     padding: 0.6rem 0;
   }
+  .fresh-deals__tab--active::after {
+    bottom: -16px; 
+    height: 2px;
 }
+}
+
+
+
