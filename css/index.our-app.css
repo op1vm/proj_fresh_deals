@@ -137,6 +137,7 @@
     width: 100px;
     aspect-ratio: 130 / 281;
     align-self: center;
+    z-index: 1;
   }
 
   .our-app__phone-background,
@@ -170,8 +171,8 @@
     .phone-menu {
       display: block;
       position: absolute;
-      top: 47px; 
-      right: 33px; 
+      top: 47px;
+      right: 33px;
       z-index: 100;
     }
 
@@ -185,7 +186,10 @@
       cursor: pointer;
       z-index: 102;
       padding: 15px;
+      left: 147px;
+      top: 25px;
     }
+
 
     .phone-menu__button span {
       display: block;
@@ -224,24 +228,38 @@
       transform: rotate(-45deg);
     }
 
-    .phone-menu__nav {
-      position: fixed;
-      top: 250px; 
-      right: -250px; 
-      width: 250px;
-      height: auto;
-      background: var(--bg-color-light);
-      padding: 80px 25px 25px;
-      transition: all .3s ease;
-      border-radius: 12px 0 0 12px;
-      box-shadow: none;
-      z-index: 101;
-    }
 
-    .phone-menu__nav.active {
-      right: 0; 
-      box-shadow: -2px 0 15px var(--text-color-light);
-    }
+.our-app {
+  position: relative;
+}
+
+.phone-menu {
+  position: absolute;
+  z-index: 101; 
+  top: 127px;
+  right: 637px;
+}
+
+.phone-menu__nav {
+  position: sticky;
+  top: 250px; 
+  height: 400px;
+  width: 190px;
+  background: var(--text-color-on-dark-bg);
+  padding: 80px 25px 25px;
+  border-radius: 12px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity .3s ease, visibility .3s ease;
+}
+
+.phone-menu__nav.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 
     .phone-menu__nav ul {
       list-style: none;
