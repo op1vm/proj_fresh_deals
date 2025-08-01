@@ -1,7 +1,7 @@
 .partners {
   position: relative;
   overflow: hidden;
-  padding: 60px 0;
+  padding: 40px 0;
 }
 .partners__background {
   position: absolute;
@@ -16,6 +16,11 @@
   height: 100%;
   object-fit: cover;
 }
+.partners__carousel {
+  overflow: hidden;
+  position: relative;
+}
+
 .partners__controls {
   position: absolute;
   top: 50%;
@@ -24,55 +29,70 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
   z-index: 2;
   transform: translateY(-50%);
+  width: 100%;
+  padding: 0 8x;
+  pointer-events: none;
 }
+
 .partners__button {
   background: none;
   border: none;
   cursor: pointer;
   width: 40px;
   height: 40px;
+  pointer-events: all;
+  font-size: 32px;
+  user-select: none;
+  margin: 0 240px;
+
 }
+
 .partners__arrow-icon {
   fill: var(--color-icon-fill);
   width: 30px;
   height: 30px;
   transform: rotate(180deg);
 }
+
 .partners__button--next .partners__arrow-icon {
   transform: none;
 }
 
-.partners__section {
-  display: block;
-  box-sizing: border-box;
-  transform: translateZ(0);
-}
-
-.partners__content {
-  margin: auto;
+:root {
+  --partners-logo-width: 200px;
+  --partners-logo-height: 80px;
 }
 
 .partners__list {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
-  position: relative;
-  z-index: 1;
+  gap: 48px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 32px 16px;
+  scrollbar-width: none;
 }
+
+.partners__list::-webkit-scrollbar {
+  display: none;
+}
+
 .partners__item {
   flex: 0 0 auto;
-}
-.partners__logo {
+  width: var(--partners-logo-width);
+  height: var(--partners-logo-height);
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .partners__image {
   display: block;
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
