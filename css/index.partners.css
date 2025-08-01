@@ -18,18 +18,21 @@
 }
 .partners__carousel {
   overflow: hidden;
+  position: relative;
 }
 
 .partners__controls {
   position: absolute;
   top: 50%;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 2;
   transform: translateY(-50%);
   width: 100%;
-  padding: 0 16px;
+  padding: 0 8x;
   pointer-events: none;
 }
 
@@ -42,6 +45,8 @@
   pointer-events: all;
   font-size: 32px;
   user-select: none;
+  margin: 0 240px;
+
 }
 
 .partners__arrow-icon {
@@ -56,7 +61,7 @@
 }
 
 :root {
-  --partners-logo-width: 180px;
+  --partners-logo-width: 200px;
   --partners-logo-height: 80px;
 }
 
