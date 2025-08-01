@@ -15,12 +15,13 @@
   }
   .fresh-deals__subtitle {
     color: var(--text-color-dark);
-    font-size: 2.1rem;
+    font-size: 2.625rem;
     font-weight: 700;
+    margin-top: 10px;
   }
   .fresh-deals__description {
     color: var(--text-color-dark);
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     box-sizing: border-box;
     overflow-wrap: break-word;
   }
@@ -41,24 +42,14 @@
   margin: 0 auto;
   position: relative;
 
-  .fresh-deals__indicator {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 3px;
-  width: 0;
-  background-color: var(--cta-color);
-  transition: all 0.3s ease;
-  border-radius: 1px;
-  
-}
   .fresh-deals__tab {
     color: var(--text-color-light);
     text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: bold;
+    font-size: 0.875rem;
+    font-weight: 700;
     padding: 0 0.5rem;
     white-space: nowrap;
+    
 
     &:hover {
       color: var(--text-color-dark);
@@ -95,6 +86,12 @@
     text-align: center;
     width: 17rem;
     height: 26.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px var(--bg--color--form)
+    }
 
     .fresh-deals__image {
       height: 13.6rem;
