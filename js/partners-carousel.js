@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnNext = document.querySelector(".partners__button--next");
   const btnPrev = document.querySelector(".partners__button--prev");
 
-  const scrollAmount = 200;
-
   if (!list || !btnNext || !btnPrev) {
-    console.warn("Елементи каруселі не знайдені");
+    console.warn("Карусель: елементи не знайдено");
     return;
   }
+
+  const scrollAmount = list.offsetWidth / 2; // прокрутка на половину видимої області
 
   btnNext.addEventListener("click", () => {
     list.scrollBy({ left: scrollAmount, behavior: "smooth" });
