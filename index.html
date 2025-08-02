@@ -111,16 +111,19 @@
       data-hx-swap="outerHTML"
       data-hx-get="global.footer.partial.html"
     ></footer>
-    <button
-      type="button"
-      class="btn btn-success position-fixed cart-modal__toggle-btn"
-      style="bottom: 20px; right: 20px; z-index: 1050"
-      data-bs-toggle="modal"
-      data-bs-target="#cartModal"
-      aria-label="Open cart"
-    >
-      🛒
-    </button>
+<button
+  type="button"
+  class="btn position-fixed cart-toggle position-relative"
+  style="top: 155px; right: 12px; z-index: 1050;"
+  data-bs-toggle="modal"
+  data-bs-target="#cartModal"
+  aria-label="Open cart"
+  >
+  🛒
+<i class="bi bi-cart-fill"></i>
+  <span class="cart-badge">1</span>
+</button>
+
     <div
       data-hx-trigger="load"
       data-hx-swap="outerHTML"

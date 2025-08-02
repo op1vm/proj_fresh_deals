@@ -1,3 +1,5 @@
+import { showAlert } from "./alert.js";
+
 function attachCartEvents(cartModal) {
   const updateTotal = () => {
     let total = 0;

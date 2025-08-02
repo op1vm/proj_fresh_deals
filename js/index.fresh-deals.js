@@ -1,3 +1,5 @@
+import { CartModal } from "./cart-modal.js";
+import { showAlert } from "./alert.js";
 const tabs = document.querySelectorAll(".fresh-deals__tab");
 const productGroups = document.querySelectorAll(".fresh-deals__products");
 const indicator = document.querySelector(".fresh-deals__indicator");
