@@ -8,6 +8,8 @@ function init() {
   import("./index.fresh-deals.js");
   import("./index.organic.js");
   import("./index.phone-burger-menu.js");
+  import("./alert.js");
+  import("./cart-modal.js");
 }
 
 const totalPartials = document.querySelectorAll(
