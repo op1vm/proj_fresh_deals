@@ -11,14 +11,19 @@
   height: 100%;
   z-index: 0;
 }
+
 .partners__background-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .partners__carousel {
   overflow: hidden;
   position: relative;
+  width: 100%;
+  max-width: calc(5 * var(--partners-logo-width) + 4 * 12px);
+  margin: 0 auto;
 }
 
 .partners__controls {
@@ -32,7 +37,7 @@
   z-index: 2;
   transform: translateY(-50%);
   width: 100%;
-  padding: 0 8x;
+  padding: 0 48px;
   pointer-events: none;
 }
 
@@ -45,8 +50,8 @@
   pointer-events: all;
   font-size: 32px;
   user-select: none;
-  margin: 0 240px;
-
+  margin: 0;
+  pointer-events: all;
 }
 
 .partners__arrow-icon {
@@ -61,19 +66,21 @@
 }
 
 :root {
-  --partners-logo-width: 200px;
-  --partners-logo-height: 80px;
+  --partners-logo-width: 360px;
+  --partners-logo-height: 120px;
 }
 
 .partners__list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 48px;
+  gap: 12px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding: 32px 16px;
+  padding: 12px 0px;
   scrollbar-width: none;
+  max-width: 100%;
+  width: 100%;
 }
 
 .partners__list::-webkit-scrollbar {
