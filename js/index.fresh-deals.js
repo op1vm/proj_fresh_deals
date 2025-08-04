@@ -1,8 +1,7 @@
-import { CartModal } from "./cart-modal.js";
-import { showAlert } from "./alert.js";
+//import { CartModal } from "./cart-modal.js";
+//import { showAlert } from "./alert.js";
 const tabs = document.querySelectorAll(".fresh-deals__tab");
 const productGroups = document.querySelectorAll(".fresh-deals__products");
-const indicator = document.querySelector(".fresh-deals__indicator");
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", (e) => {
@@ -24,6 +23,7 @@ const activeCategory = activeTab?.dataset.category;
 productGroups.forEach((group) => {
   group.hidden = group.dataset.category !== activeCategory;
 })
+
 
 
 
