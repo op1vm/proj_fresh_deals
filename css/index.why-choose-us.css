@@ -11,8 +11,14 @@
   --why-container: 1200px;
 }
 
+/* ===== Секція ===== */
+
 .why-us {
-  background-color: var(--why-bg);
+  background-color: var(--why-bg); /* fallback-колір */
+  background-image: url("../img/why-choose-us/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 4rem 1rem;
 }
 
@@ -20,26 +26,15 @@
   max-width: var(--why-container);
   margin-inline: auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 600px);
+  grid-template-columns: minmax(0, 600px); /* одна колонка */
   align-items: center;
   gap: var(--why-gap);
+  justify-content: end; /* контент «притиснуто» вправо на широких екранах */
 }
 
-.why-us__picture {
-  display: block;
-  height: 100%;
-}
+/* ===== Контент ===== */
 
-.why-us__photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--why-radius);
-}
-
-.why-us__content {
-  color: var(--why-text);
-}
+.why-us__content { color: var(--why-text); }
 
 .why-us__label {
   color: var(--why-accent);
@@ -62,6 +57,8 @@
   max-width: 45ch;
   line-height: 1.55;
 }
+
+/* ===== Список переваг ===== */
 
 .why-us__list {
   display: grid;
@@ -95,27 +92,17 @@
   line-height: 1.4;
 }
 
+/* ===== Адаптив ===== */
+
 @media (max-width: 991.98px) {
   .why-us__container {
     grid-template-columns: 1fr;
+    justify-content: center;
   }
-
-  .why-us__picture {
-    order: -1;
-    margin-bottom: 2.5rem;
-  }
-
-  .why-us__text {
-    margin-bottom: 2rem;
-  }
+  .why-us__text { margin-bottom: 2rem; }
 }
 
 @media (max-width: 575.98px) {
-  .why-us {
-    padding: 2.5rem 0.75rem;
-  }
-
-  .why-us__list {
-    grid-template-columns: 1fr;
-  }
+  .why-us { padding: 2.5rem 0.75rem; }
+  .why-us__list { grid-template-columns: 1fr; }
 }
