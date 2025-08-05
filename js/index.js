@@ -1,6 +1,7 @@
 function init() {
   import("./global.header-burger.js");
   import("./global.header-menu-list.js");
+  import("./global.header-bitcoin-price.js");
   import("./partners-carousel.js");
   import("./index.about-us.js");
   import("./index.top-picks.js");
