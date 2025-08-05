@@ -15,6 +15,12 @@ function closeMenu() {
 
 burger.addEventListener("click", toggleMenu);
 
+window.addEventListener("resize", function () {
+  if (window.innerWidth >= 992) {
+    closeMenu();
+  }
+});
+
 setTimeout(() => {
   const menuLinks = document.querySelectorAll(".header__menu-link");
   menuLinks.forEach((link) => {
