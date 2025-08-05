@@ -161,6 +161,53 @@
     height: 2px;
 }
 }
+.favorite-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 1.4rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ccc;
+  z-index: 5;
+  transition: color 0.3s ease;
+}
 
+.favorite-btn.favorited {
+  color: red;
+}
+
+.fresh-deals__product {
+  position: relative; 
+}
+
+.favorite-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.notification {
+  position: absolute;
+  top: 10%;
+  left: 35%;
+  transform: translateY(-30%);
+  margin-left: 0.75rem;
+  background-color:#d9f16e;
+  color: var(--text-color-darkest);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  font-weight: 550;
+  
+}
+
+.notification--visible {
+  opacity: 1;
+}
 
 
