@@ -1,5 +1,4 @@
 :root {
-  /* базові змінні секції */
   --why-bg: #faf4f1;
   --why-accent: #95b400;
   --why-title: #1f2729;
@@ -8,63 +7,65 @@
   --why-gap: 3.5rem;
   --why-radius: 0.75rem;
   --why-list-gap: 2rem;
-  --why-icon-size: 3.5rem;          /* 56 px */
+  --why-icon-size: 3.5rem;           
   --why-container: 1200px;
   --why-shadow: 0 6px 20px rgba(0,0,0,.06);
 }
 
-/* ===== Секція ===== */
-
 .why-us{
-  background:var(--why-bg)
-             url("/img/why-choose-us/bg.jpg") right center/cover no-repeat;
-  padding:4rem 1rem;
+  background: var(--why-bg)
+              url("/img/why-choose-us/bg.jpg") right center / cover no-repeat;
+  padding: 4rem 1rem;
 }
-
+ 
 .why-us__container{
-  max-width:var(--why-container);
-  margin-inline:auto;
-  display:grid;
-  grid-template-columns:minmax(0,600px) 1fr;   /* 2 колонки за замовчуванням */
-  align-items:center;
-  gap:var(--why-gap);
+  max-width: var(--why-container);
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: minmax(clamp(300px, 30vw, 550px), 1fr);
+  column-gap: 2.75rem;
+  align-items: center;
 }
 
-.why-us__content{grid-column:2;color:var(--why-text);} /* завжди у правій */
+.why-us__content{
+  grid-column: 2;
+  color: var(--why-text);
+}
 
-/* ===== Контент ===== */
 
 .why-us__label{
-  color:var(--why-accent);
-  font-weight:700;
-  text-transform:uppercase;
-  margin-bottom:1rem;
-  letter-spacing:.05em;
+  color: var(--why-accent);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: .85rem;
+  letter-spacing: .05em;
 }
 
 .why-us__title{
-  color:var(--why-title);
-  font-size:clamp(1.8rem,2vw+1.2rem,2.75rem);
-  line-height:1.2;
-  margin-bottom:1.25rem;
-  font-weight:700;
+  color: var(--why-title);
+  font-size: clamp(1.9rem, 1.2vw + 1.5rem, 2.6rem);
+  line-height: 1.18;
+  margin-bottom: 1.15rem;
+  font-weight: 700;
 }
 
 .why-us__text{
-  margin-bottom:2.5rem;
-  max-width:45ch;
-  line-height:1.55;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 42ch;
+  line-height: 1.55;
 }
 
-/* ===== Список переваг ===== */
 
 .why-us__list{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr)); /* 2 × 2, як на макеті */
-  gap:var(--why-list-gap);
-  margin:0;
-  padding:0;
-  list-style:none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--why-list-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .why-us__item{display:flex;gap:1rem;}
@@ -81,7 +82,6 @@
   transition:transform .25s,box-shadow .25s;
   cursor:pointer;
 }
-
 .why-us__item-link:hover,
 .why-us__item-link:focus-visible{
   transform:translateY(-4px);
@@ -89,51 +89,45 @@
   outline:none;
 }
 
+
 .why-us__icon{
   flex:0 0 var(--why-icon-size);
   width:var(--why-icon-size);
   height:var(--why-icon-size);
   transition:transform .25s;
 }
-
 .why-us__item-link:hover .why-us__icon,
 .why-us__item-link:focus-visible .why-us__icon{
   transform:scale(1.1);
 }
 
+
 .why-us__item-title{
-  font-size:1.15rem;
+  font-size:1.1rem;
   margin:0 0 .25rem;
   color:var(--why-title);
   font-weight:700;
 }
-
-.why-us__item-text{margin:0;line-height:1.4;}
-
-/* ===== Адаптив ===== */
-
-/* ≤1199 px — фон ліворуч, контент праворуч з обмеженням ширини */
-@media(max-width:1199.98px){
-  .why-us__container{
-    grid-template-columns:minmax(0,500px) 1fr;
-  }
+.why-us__item-text{
+  font-size:.95rem;
+  margin:0;
+  line-height:1.4;
 }
 
-/* ≤991 px — одна колонка, контент по центру; фон прибираємо */
-@media(max-width:991.98px){
+@media (max-width: 991.98px){
   .why-us{
-    background:var(--why-bg);
+    background: var(--why-bg);
   }
   .why-us__container{
-    grid-template-columns:1fr;
-    justify-items:center;
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
-  .why-us__content{grid-column:auto;text-align:center;}
+  .why-us__content{
+    grid-column: auto;
+    text-align: center;
+  }
   .why-us__list{grid-template-columns:1fr;}
-  .why-us__text{margin-bottom:2rem;}
 }
-
-/* ≤575 px — менші відступи */
-@media(max-width:575.98px){
+@media (max-width: 575.98px){
   .why-us{padding:2.5rem .75rem;}
 }
