@@ -24,6 +24,41 @@ productGroups.forEach((group) => {
   group.hidden = group.dataset.category !== activeCategory;
 })
 
+const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+document.querySelectorAll(".favorite-btn").forEach((btn) => {
+  const productName = btn.dataset.name;
+  if (favorites.includes(productName)) {
+    btn.classList.add("favorited");
+  }
+  btn.addEventListener("click", () => {
+    const index = favorites.indexOf(productName);
+    if (index !== -1) {
+      favorites.splice(index, 1);
+      btn.classList.remove("favorited");
+    } else {
+      favorites.push(productName);
+      btn.classList.add("favorited");
+    }
+
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  });
+});
+
+const favoriteBtn = document.querySelector(".favorite-btn");
+const notification = document.getElementById("favorite-notification");
+
+favoriteBtn.addEventListener("click", () => {
+  notification.classList.add("notification--visible");
+
+  setTimeout(() => {
+    notification.classList.remove("notification--visible");
+  }, 3000);
+})
+
+
+  
+
 
 
 

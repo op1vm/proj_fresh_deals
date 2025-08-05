@@ -1,5 +1,5 @@
 <!-- Diana Patynok -->
-<section id="fresh-deals" class="fresh-deals__section">
+<section id="shop-deals" class="fresh-deals__section" >
   <div class="fresh-deals__header">
     <h2 class="fresh-deals__title">Fresh Deals</h2>
     <p class="fresh-deals__subtitle">Right Off the Vine</p><br>
@@ -13,11 +13,17 @@
       <a href="#" class="fresh-deals__tab" data-category="vegetables">Vegetables</a>
       <a href="#" class="fresh-deals__tab" data-category="berries">Berries</a>
       <a href="#" class="fresh-deals__tab" data-category="nuts">Nuts</a>
+      <a href="#" class="fresh-deals__tab" data-category="favorites">Favorites</a>
+  </div>
+  
     </nav>
     <div class="fresh-deals__grid">
+     <div class="fresh-deals__products" data-category="favorites" hidden></div>
       <!--Fruit-->
         <div class="fresh-deals__products" data-category="fruit">
           <article class="fresh-deals__product">
+          <button class="favorite-btn" data-name="Figs" aria-label="Add to favorites">♥</button>
+          <div class="notification" id="favorite-notification">Added to favorites</div>
         <img
           class="fresh-deals__image"
           src="img/fresh-deals/fresh-figs.png"
@@ -192,4 +198,5 @@
     </div>
   </div>
   </section>
+           
 
