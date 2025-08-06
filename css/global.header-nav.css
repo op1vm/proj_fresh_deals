@@ -29,6 +29,16 @@
         }
       }
     }
+    .header__bitcoin {
+      color: var(--cta-color);
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.7px;
+      .header__bitcoin-price {
+        color: var(--links-bg);
+        font-weight: 500;
+      }
+    }
     .header__socials {
       display: flex;
       gap: 15px;
