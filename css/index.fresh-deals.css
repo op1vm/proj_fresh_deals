@@ -49,7 +49,6 @@
     font-weight: 700;
     padding: 0 0.5rem;
     white-space: nowrap;
-    
 
     &:hover {
       color: var(--text-color-dark);
@@ -73,20 +72,27 @@
 }
 .fresh-deals__grid .fresh-deals__products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.5rem;
-  padding: 1rem;
+  padding: 3.5rem;
   justify-items: center;
   box-sizing: border-box;
   justify-content: center;
   text-align: center;
+  max-width: 1160px;
+  margin: 0 auto;
+  width: 100%;
 
   .fresh-deals__product {
-    background-color: var(--bg-color-light);
-    text-align: center;
-    width: 17rem;
-    height: 26.1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--bg-color-light);
+  text-align: center;
+  width: 100%;
+  max-width: 17rem;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  min-width: 0;
+  padding-bottom: 1rem;
 
     &:hover {
       transform: translateY(-10px);
@@ -94,13 +100,12 @@
     }
 
     .fresh-deals__image {
-      height: 13.6rem;
-      width: 13.6rem;
-      cursor: pointer;
+      width: 100%;
+      height: auto;
+      max-width: 13.6rem;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 2rem;
+      margin: 2rem auto 0;
+      cursor: pointer;
     }
     .fresh-deals__name,
     .fresh-deals__price {
@@ -161,6 +166,7 @@
     height: 2px;
 }
 }
+
 .favorite-btn {
   position: absolute;
   top: 8px;
@@ -169,43 +175,34 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  color: #ccc;
+  color:var( --border-color-light);
   z-index: 5;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
-
 .favorite-btn.favorited {
-  color: red;
+  color:var(--error-color);
 }
-
-.fresh-deals__product {
-  position: relative; 
-}
-
 .favorite-wrapper {
   position: relative;
   display: inline-block;
 }
-
 .notification {
   position: absolute;
-  top: 10%;
-  left: 35%;
-  transform: translateY(-30%);
-  margin-left: 0.75rem;
-  background-color:#d9f16e;
+  top: 2rem;
+  right: 1rem;
+  background-color: var(--favorites-color);
   color: var(--text-color-darkest);
   padding: 0.5rem 1rem;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-size: 0.9rem;
+  font-weight: 550;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  font-weight: 550;
+  z-index: 10;
   
 }
-
 .notification--visible {
   opacity: 1;
 }
