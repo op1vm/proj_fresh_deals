@@ -1,6 +1,5 @@
 const burger = document.querySelector(".header__burger");
 const nav = document.querySelector(".header__menu");
-const menuLinks = document.querySelectorAll(".header__menu-link");
 
 function toggleMenu() {
   burger.classList.toggle("is-active");
@@ -16,6 +15,15 @@ function closeMenu() {
 
 burger.addEventListener("click", toggleMenu);
 
-menuLinks.forEach((link) => {
-  link.addEventListener("click", closeMenu);
+window.addEventListener("resize", function () {
+  if (window.innerWidth >= 992) {
+    closeMenu();
+  }
 });
+
+setTimeout(() => {
+  const menuLinks = document.querySelectorAll(".header__menu-link");
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+}, 1000);

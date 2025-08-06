@@ -1,5 +1,5 @@
 <!-- Diana Patynok -->
-<section id="fresh-deals" class="fresh-deals__section">
+<section id="shop-deals" class="fresh-deals__section " >
   <div class="fresh-deals__header">
     <h2 class="fresh-deals__title">Fresh Deals</h2>
     <p class="fresh-deals__subtitle">Right Off the Vine</p><br>
@@ -15,9 +15,12 @@
       <a href="#" class="fresh-deals__tab" data-category="nuts">Nuts</a>
     </nav>
     <div class="fresh-deals__grid">
+     <div class="fresh-deals__products" data-category="favorites" hidden></div>
       <!--Fruit-->
         <div class="fresh-deals__products" data-category="fruit">
           <article class="fresh-deals__product">
+          <button class="favorite-btn" data-name="Figs" aria-label="Add to favorites">♥</button>
+          <div class="notification" id="favorite-notification">Added to favorites</div>
         <img
           class="fresh-deals__image"
           src="img/fresh-deals/fresh-figs.png"
@@ -27,8 +30,9 @@
         <p class="fresh-deals__price">5,00 USD</p>
         <button class="fresh-deals__button">Buy Now</button>
       </article>
-
       <article class="fresh-deals__product">
+       <button class="favorite-btn" data-name="Limes" aria-label="Add to favorites">♥</button>
+       <div class="notification" id="favorite-notification">Added to favorites</div>
         <img
           class="fresh-deals__image"
           src="img/fresh-deals/limes.png"
@@ -38,8 +42,9 @@
         <p class="fresh-deals__price">1,00 USD</p>
         <button class="fresh-deals__button">Buy Now</button>
       </article>
-
       <article class="fresh-deals__product">
+        <button class="favorite-btn" data-name="Peaches" aria-label="Add to favorites">♥</button>
+        <div class="notification" id="favorite-notification">Added to favorites</div>
         <img
           class="fresh-deals__image"
           src="img/fresh-deals/peaches.png"
@@ -49,8 +54,9 @@
         <p class="fresh-deals__price">3,00 USD</p>
         <button class="fresh-deals__button">Buy Now</button>
       </article>
-
       <article class="fresh-deals__product">
+        <button class="favorite-btn" data-name="Tangarines" aria-label="Add to favorites">♥</button>
+        <div class="notification" id="favorite-notification">Added to favorites</div>
         <img
           class="fresh-deals__image"
           src="img/fresh-deals/tangerines.png"
@@ -64,6 +70,8 @@
         <!--Vegetables-->
       <div class="fresh-deals__products" data-category="vegetables" hidden>
       <article class="fresh-deals__product">
+        <button class="favorite-btn" data-name="Bell-Pepper" aria-label="Add to favorites">♥</button>
+        <div class="notification" id="favorite-notification">Added to favorites</div>
         <img
           class="fresh-deals__image"
           src="img/fresh-deals/bell-pepper.png"
@@ -74,6 +82,8 @@
         <button class="fresh-deals__button">Buy Now</button>
       </article>
       <article class="fresh-deals__product">
+        <button class="favorite-btn" data-name="Tomatoes" aria-label="Add to favorites">♥</button>
+        <div class="notification" id="favorite-notification">Added to favorites</div>
         <img
           class="fresh-deals__image"
           src="img/fresh-deals/tomatoes.png"
@@ -84,6 +94,8 @@
         <button class="fresh-deals__button">Buy Now</button>
       </article>
       <article class="fresh-deals__product">
+        <button class="favorite-btn" data-name="Carrots" aria-label="Add to favorites">♥</button>
+        <div class="notification" id="favorite-notification">Added to favorites</div>
         <img
           class="fresh-deals__image"
           src="img/fresh-deals/carrots.png"
@@ -94,6 +106,8 @@
         <button class="fresh-deals__button">Buy Now</button>
       </article>
       <article class="fresh-deals__product">
+        <button class="favorite-btn" data-name="Pumpkin" aria-label="Add to favorites">♥</button>
+        <div class="notification" id="favorite-notification">Added to favorites</div>
         <img
           class="fresh-deals__image"
           src="img/fresh-deals/pumpkin.png"
@@ -107,6 +121,8 @@
     <!--Berries-->
     <div class="fresh-deals__products" data-category="berries" hidden>
       <article class="fresh-deals__product">
+        <button class="favorite-btn" data-name="Blueberries" aria-label="Add to favorites">♥</button>
+        <div class="notification" id="favorite-notification">Added to favorites</div>
         <img
           class="fresh-deals__image"
           src="img/fresh-deals/blueberries.png"
@@ -117,6 +133,8 @@
         <button class="fresh-deals__button">Buy Now</button>
       </article>
       <article class="fresh-deals__product">
+        <button class="favorite-btn" data-name="Red Grapes" aria-label="Add to favorites">♥</button>
+        <div class="notification" id="favorite-notification">Added to favorites</div>
         <img
           class="fresh-deals__image"
           src="img/fresh-deals/red-grapes.png"
@@ -127,6 +145,8 @@
         <button class="fresh-deals__button">Buy Now</button>
       </article>
       <article class="fresh-deals__product">
+        <button class="favorite-btn" data-name="Watermelon" aria-label="Add to favorites">♥</button>
+        <div class="notification" id="favorite-notification">Added to favorites</div>
       <img
         class="fresh-deals__image"
         src="img/fresh-deals/watermelon.png"
@@ -137,6 +157,8 @@
       <button class="fresh-deals__button">Buy Now</button>
     </article>
       <article class="fresh-deals__product">
+        <button class="favorite-btn" data-name="Raspberries" aria-label="Add to favorites">♥</button>
+        <div class="notification" id="favorite-notification">Added to favorites</div>
         <img
           class="fresh-deals__image"
           src="img/fresh-deals/raspberries.png"
@@ -150,6 +172,8 @@
     <!--Nuts-->
     <div class="fresh-deals__products" data-category="nuts" hidden>
       <article class="fresh-deals__product">
+        <button class="favorite-btn" data-name="Cashew Nuts" aria-label="Add to favorites">♥</button>
+        <div class="notification" id="favorite-notification">Added to favorites</div>
         <img
           class="fresh-deals__image"
           src="img/fresh-deals/cashew-nuts.png"
@@ -166,10 +190,14 @@
           alt="Macadamia Nuts"
         />
         <p class="fresh-deals__name">Macadamia Nuts</p>
+        <button class="favorite-btn" data-name="Macadamia Nuts" aria-label="Add to favorites">♥</button>
+        <div class="notification" id="favorite-notification">Added to favorites</div>
         <p class="fresh-deals__price">17,00 USD</p>
         <button class="fresh-deals__button">Buy Now</button>
       </article>
       <article class="fresh-deals__product">
+        <button class="favorite-btn" data-name="Raw Walnuts" aria-label="Add to favorites">♥</button>
+        <div class="notification" id="favorite-notification">Added to favorites</div>
         <img
           class="fresh-deals__image"
           src="img/fresh-deals/raw-walnuts.png"
@@ -180,6 +208,8 @@
         <button class="fresh-deals__button">Buy Now</button>
       </article>
       <article class="fresh-deals__product">
+        <button class="favorite-btn" data-name="Pistachios" aria-label="Add to favorites">♥</button>
+        <div class="notification" id="favorite-notification">Added to favorites</div>
         <img
           class="fresh-deals__image"
           src="img/fresh-deals/pistachios.png"
@@ -191,5 +221,6 @@
       </article>
     </div>
   </div>
-  </section>
+</section>
+           
 
