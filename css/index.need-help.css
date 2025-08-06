@@ -32,10 +32,11 @@
 }
 
 .contact-info__label {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: var(--cta-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 20px;
+  margin-top: 45px;
 }
 
 .contact-info__var {

@@ -13,8 +13,7 @@
 }
 
 .why-us{
-  background: var(--why-bg)
-              url("/img/why-choose-us/bg.jpg") right center / cover no-repeat;
+ background: var(--why-bg) url(../img/why-choose-us/bg.jpg) right center / cover no-repeat;
   padding: 4rem 1rem;
 }
  
