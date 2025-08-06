@@ -66,7 +66,7 @@
 }
 
 :root {
-  --partners-logo-width: 220px;
+  --partners-logo-width: 280px;
   --partners-logo-height: auto;
 }
 
@@ -112,7 +112,7 @@
     padding: 0 24px;
   }
   :root {
-    --partners-logo-width: 200px;
+    --partners-logo-width: 240px;
     --partners-logo-height: auto;
   }
 }
@@ -125,7 +125,7 @@
     padding: 0 24px;
   }
   :root {
-    --partners-logo-width: 200px;
+    --partners-logo-width: 240px;
     --partners-logo-height: auto;
   }
 }
@@ -155,7 +155,7 @@
     filter: none;
   }
   :root {
-    --partners-logo-width: 200px;
+    --partners-logo-width: 240px;
     --partners-logo-height: auto;
   }
 }
@@ -211,7 +211,7 @@
     filter: none;
   }
   :root {
-    --partners-logo-width: 220px;
+    --partners-logo-width: 280px;
     --partners-logo-height: auto;
   }
 }
@@ -241,7 +241,7 @@
     filter: none;
   }
   :root {
-    --partners-logo-width: 220px;
+    --partners-logo-width: 280px;
     --partners-logo-height: auto;
   }
 }
