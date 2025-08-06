@@ -29,10 +29,11 @@
 
 .testimonials__container {
   display: flex;
-  justify-content: center;
+  align-items: center; /* This centers items vertically */
+  justify-content: center; /* This centers items horizontally */
   gap: 40px;
   flex-wrap: wrap;
-}
+
 
 .testimonial {
   background-color: var(--bg-color-light);
@@ -45,7 +46,6 @@
   flex-direction: column;
   align-items: center;
 }
-
 
 .testimonial__image {
   width: 80px;
@@ -77,3 +77,18 @@
   font-weight: 600;
   font-size: 14px;
 }
+
+ .top-picks__left-btn,
+    .top-picks__right-btn {
+      background-color: var(--text-color-on-dark-bg);
+      color: var(--text-color-light);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s, color 0.3s;}
