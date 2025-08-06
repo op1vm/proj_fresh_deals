@@ -11,6 +11,7 @@ function init() {
   import("./index.phone-burger-menu.js");
   import("./alert.js");
   import("./cart-modal.js");
+  import("./index.testimonials.js")
 }
 
 const totalPartials = document.querySelectorAll(
