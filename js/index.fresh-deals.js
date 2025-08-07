@@ -52,9 +52,3 @@ document.querySelectorAll(".favorite-btn").forEach((btn) => {
   })
 })
 
-  
-
-
-
-
-
