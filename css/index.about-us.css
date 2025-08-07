@@ -25,8 +25,8 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background: rgba(255, 255, 255, 0.8);
-  border: 2px solid red;
+  background:var(--bg-color-light);
+  border: 2px solid var(--error-color);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -35,23 +35,28 @@
   justify-content: center;
   cursor: pointer;
   z-index: 2;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--bg--color--form);
 }
 
+.rotate-btn:active {
+    background:var(--accent-color);
+    transition:background-color 0.1s;
+    transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
 .rotate-btn svg {
   width: 20px;
   height: 20px;
-  fill: red;
-  transition: transform 2s ease;
+  fill: var(--error-color);
+    transition: ease-in-out 2.3s;
 }
 
 .rotate-btn:active svg {
-  transform: scale(5);
-  transition: transform 0.3s ease;
+    transition:ease-in-out 2.3s;
+    fill: var(--accent-color-hover);
 }
 
 #aboutUsImage {
-  transition: transform 0.5s ease;
+  transition:var(--transition-duration);
   max-width: 100%;
   height: auto;
   transform-origin: center center;
@@ -74,26 +79,6 @@
   align-items: center;
   cursor: pointer;
   will-change: color;
-}
-
-.about-us__title::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background-color: var(--cta-color-hover);
-  transition-duration: var(--transition-duration);
-  will-change: width;
-}
-.about-us__title:hover {
-  color: var(--cta-color-hover);
-}
-
-.about-us__title:hover::after {
-  width: 100%;
 }
 
 .about-us__subtitle {
@@ -145,29 +130,8 @@
 }
 
 .about-us__item::before {
-  content: url("../img/about-us/round-tick.svg");
-  margin-right: 4px;
-}
-
-.about-us__item::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background-color: var(--accent-color-hover);
-  transition-duration: var(--transition-duration);
-}
-
-.about-us__item:hover {
-  text-shadow: 5px 5px 5px var(--cta-color-hover);
-  outline: #8bb000;
-}
-
-.about-us__item:hover::after {
-  width: 100%;
+    content: url("../img/about-us/round-tick.svg");
+    margin-right: 4px;
 }
 
 .about-us__button {
@@ -181,8 +145,8 @@
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color var(--transition-duration) ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color var(--transition-duration);
+  box-shadow: 0 4px 8px var(--bg--color--form);
   will-change: background-color;
 }
 

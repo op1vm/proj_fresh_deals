@@ -22,6 +22,7 @@ function initImageRotation() {
   }
 }
 
+
 document.body.addEventListener("htmx:afterOnLoad", function (event) {
   if (
     event.detail.elt.getAttribute("data-hx-get") ===

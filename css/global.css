@@ -27,7 +27,7 @@
   --orange-primary: #f69946;
   --favorites-color:#d9f16e;
   scroll-behavior: smooth;
-  --transition-duration: 0.5s ease;
+  --transition-duration: 0.8s;
 }
 
 body {
