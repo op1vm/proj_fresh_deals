@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "type": "fruit",
+    "name": "Fresh Figs",
+    "price": "5.00 USD",
+    "image": "img/fresh-deals/fresh-figs.png"
+  },
+  {
+    "id": 2,
+    "type": "fruit",
+    "name": "Limes",
+    "price": "1.00 USD",
+    "image": "img/fresh-deals/limes.png"
+  },
+  {
+    "id": 3,
+    "type": "fruit",
+    "name": "Peaches",
+    "price": "3.00 USD",
+    "image": "img/fresh-deals/peaches.png"
+  },
+  {
+    "id": 4,
+    "type": "fruit",
+    "name": "Tangerines",
+    "price": "2.00 USD",
+    "image": "img/fresh-deals/tangerines.png"
+  },
+  {
+    "id": 5,
+    "type": "vegetables",
+    "name": "Bell Pepper",
+    "price": "8.00 USD",
+    "image": "img/fresh-deals/bell-pepper.png"
+  },
+  {
+    "id": 6,
+    "type": "vegetables",
+    "name": "Tomatoes",
+    "price": "4.00 USD",
+    "image": "img/fresh-deals/tomatoes.png"
+  },
+  {
+    "id": 7,
+    "type": "vegetables",
+    "name": "Carrots",
+    "price": "1.60 USD",
+    "image": "img/fresh-deals/carrots.png"
+  },
+  {
+    "id": 8,
+    "type": "vegetables",
+    "name": "Pumpkin",
+    "price": "1.50 USD",
+    "image": "img/fresh-deals/pumpkin.png"
+  },
+  {
+    "id": 9,
+    "type": "berries",
+    "name": "Blueberries",
+    "price": "5.00 USD",
+    "image": "img/fresh-deals/blueberries.png"
+  },
+  {
+    "id": 10,
+    "type": "berries",
+    "name": "Red Grapes",
+    "price": "3.00 USD",
+    "image": "img/fresh-deals/red-grapes.png"
+  },
+  {
+    "id": 11,
+    "type": "berries",
+    "name": "Watermelon",
+    "price": "6.00 USD",
+    "image": "img/fresh-deals/watermelon.png"
+  },
+  {
+    "id": 12,
+    "type": "berries",
+    "name": "Raspberries",
+    "price": "3.00 USD",
+    "image": "img/fresh-deals/raspberries.png"
+  },
+  {
+    "id": 13,
+    "type": "nuts",
+    "name": "Cashew Nuts",
+    "price": "13.00 USD",
+    "image": "img/fresh-deals/cashew-nuts.png"
+  },
+  {
+    "id": 14,
+    "type": "nuts",
+    "name": "Macadamia Nuts",
+    "price": "17.00 USD",
+    "image": "img/fresh-deals/macadamia-nuts.png"
+  },
+  {
+    "id": 15,
+    "type": "nuts",
+    "name": "Raw Walnuts",
+    "price": "9.00 USD",
+    "image": "img/fresh-deals/raw-walnuts.png"
+  },
+  {
+    "id": 16,
+    "type": "nuts",
+    "name": "Pistachios",
+    "price": "12.00 USD",
+    "image": "img/fresh-deals/pistachios.png"
+  }
+]

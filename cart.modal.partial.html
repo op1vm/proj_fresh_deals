@@ -11,22 +11,10 @@
         <!-- Products List -->
         <section class="cart-modal__products">
           <h3 class="cart-modal__subtitle">Products</h3>
-          <div class="cart-modal__product">
-            <img src="img/our-app/cart/fresh-figs.jpg" alt="Fresh Figs" class="cart-modal__product-img" width="64" height="64" />
-            <div class="cart-modal__product-info">
-              <p class="cart-modal__product-name">Fresh Figs (0002)</p>
-              <div class="cart-modal__quantity-wrapper">
-                <label class="cart-modal__quantity-label" for="quantity-figs">Qty:</label>
-                <select id="quantity-figs" class="cart-modal__quantity-select">
-                  <option value="1" selected>1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-              </div>
-              <p class="cart-modal__product-price">5.00 USD</p>
-            </div>
-            <button class="cart-modal__remove-btn" aria-label="Remove item">🗑️</button>
-          </div>
+
+          <!-- Products will be dynamically added here -->
+        </section>
+        <section class="cart-modal__total">
           <a href="#" class="cart-modal__promo-link">Promo code</a>
           <p class="cart-modal__total">Total: <strong>5.00 USD</strong></p>
         </section>
@@ -65,13 +53,3 @@
     </div>
   </div>
 </div>
-
-<script>
-function closeCartModal() {
-  const cartModal = bootstrap.Modal.getInstance(document.getElementById('cartModal'));
-  if (cartModal) {
-    cartModal.hide();
-  }
-}
-</script>
-

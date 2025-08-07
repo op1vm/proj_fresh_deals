@@ -1,5 +1,40 @@
+import { showAlert } from "./alert.js";
+import { loadProducts, getProductById } from './products.js';
+import { CartModal } from "./cart-modal.js";
+
+// Initialize products data when the script loads
+loadProducts().catch(error => {
+  console.error('Failed to load products:', error);
+  showAlert('Failed to load products. Please refresh the page.', false);
+});
+
 const tabs = document.querySelectorAll(".fresh-deals__tab");
 const productGroups = document.querySelectorAll(".fresh-deals__products");
+const indicator = document.querySelector(".fresh-deals__indicator");
+
+const fresh_deals_buttons = document.querySelectorAll(".fresh-deals__button");
+
+fresh_deals_buttons.forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+      const productId = parseInt(e.target.closest(".fresh-deals__product")?.dataset.id);
+      const productData = getProductById(productId);
+
+      if (!productData) {
+        showAlert("Product not found!", false);
+        return;
+      }
+
+      try {
+        const cart = new CartModal();
+        cart.addProduct(productData);
+        showAlert("Product added to cart!", true);
+      } catch (error) {
+        console.error('Error adding product to cart:', error);
+        showAlert("Failed to add product to cart!", false);
+      }
+    });
+  });
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", (e) => {
