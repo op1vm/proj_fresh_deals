@@ -110,5 +110,18 @@
     "name": "Pistachios",
     "price": "12.00 USD",
     "image": "img/fresh-deals/pistachios.png"
-  }
+  },
+  { "id": 101, "type": "top-picks", "name": "Strawberries", "price": "8.00 USD", "image": "img/top-picks/strawberries.png" },
+  { "id": 102, "type": "top-picks", "name": "Blackberries", "price": "4.00 USD", "image": "img/top-picks/blackberries.png" },
+  { "id": 103, "type": "top-picks", "name": "Mango", "price": "2.50 USD", "image": "img/top-picks/mango.png" },
+  { "id": 104, "type": "top-picks", "name": "Organic Lemons", "price": "1.33 USD", "image": "img/top-picks/lemons.png" },
+  { "id": 105, "type": "top-picks", "name": "Granny Smith Apple", "price": "2.00 USD", "image": "img/top-picks/apples.png" },
+  { "id": 201, "type": "organic", "name": "Sugar Snap Peas", "price": "5.00 USD", "image": "img/organic/organic1.png" },
+  { "id": 202, "type": "organic", "name": "Cherries", "price": "12.00 USD", "image": "img/organic/organic2.png" },
+  { "id": 203, "type": "organic", "name": "Green Cucumbers", "price": "1.50 USD", "image": "img/organic/organic3.png" },
+  { "id": 204, "type": "organic", "name": "Honeydew Melon", "price": "5.00 USD", "image": "img/organic/organic4.png" },
+  { "id": 205, "type": "organic", "name": "Raw Almonds", "price": "9.00 USD", "image": "img/organic/organic5.png" },
+  { "id": 206, "type": "organic", "name": "Broccoli Crowns", "price": "1.50 USD", "image": "img/organic/organic6.png" },
+  { "id": 207, "type": "organic", "name": "Dried Figs", "price": "7.00 USD", "image": "img/organic/organic7.png" },
+  { "id": 208, "type": "organic", "name": "Green Cabbage", "price": "1.00 USD", "image": "img/organic/organic8.png" }
 ]

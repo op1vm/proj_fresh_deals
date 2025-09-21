@@ -1,4 +1,39 @@
-/* footer.css */
+/* --------------------
+  БАЗОВІ СКИДАННЯ
+-------------------- */
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* --------------------
+  ХВИЛЯ ПЕРЕД ФУТЕРОМ
+-------------------- */
+.wave-wrapper {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin: 0;
+
+  .wave-png {
+    vertical-align: bottom;
+  }
+
+  padding: 0;
+}
+
+.wave-wrapper img,
+.wave-png {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
 
 /* --------------------
   БАЗОВІ СТИЛІ
@@ -6,11 +41,6 @@
 
 .footer {
   background-color: #292929;
-  background-image: url("//res2.weblium.site/res/605f8e4e5480120021fc2e7f/62d3c2035b57da0021404b76_optimized_1536_c225x138.webp"),
-    url("../img/global-footer/footer-bg.png");
-  background-repeat: no-repeat;
-  background-position: top center, bottom center;
-  background-size: contain, cover;
   color: #fff;
   padding: 80px 20px;
   font-family: "Source Sans Pro", sans-serif;
@@ -83,8 +113,8 @@
 }
 
 .footer__social-icon {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
 }
 
@@ -169,7 +199,8 @@
 /* Input для email */
 .footer__input {
   padding: 12px 30px;
-  background-color: #424040; /* сірий фон */
+  background-color: #424040;
+  /* сірий фон */
   border: none;
   border-radius: 4px;
   font-family: "Source Sans Pro", sans-serif;

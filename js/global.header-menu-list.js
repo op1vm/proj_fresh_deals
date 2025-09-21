@@ -1,8 +1,8 @@
 const menuLinks = [
   { href: "#about", label: "About Us" },
   { href: "#shop", label: "Shop" },
-  { href: "#shop-deals", label: "Best Deals" },
-  { href: "#mobile-app", label: "App" },
+  { href: "#deals", label: "Best Deals" },
+  { href: "#app", label: "App" },
   { href: "#contacts", label: "Contacts" },
 ];
 

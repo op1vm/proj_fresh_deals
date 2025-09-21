@@ -1,3 +1,33 @@
+import { showAlert } from "./alert.js";
+import { getProductById } from "./products.js";
+import { CartModal } from "./cart-modal.js";
+
+function attachTopPicksCartHandlers() {
+  const buyButtons = document.querySelectorAll(".buy-now");
+  buyButtons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const card = btn.closest(".top-picks__card");
+      if (!card) return;
+      const id = parseInt(card.dataset.id);
+      const productData = getProductById(id);
+      if (!productData) {
+        showAlert("Product not found!", false);
+        return;
+      }
+      try {
+        const cart = new CartModal();
+        cart.addProduct(productData);
+        showAlert("Product added to cart!", true);
+      } catch (error) {
+        showAlert("Failed to add product to cart!", false);
+      }
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", attachTopPicksCartHandlers);
+document.body.addEventListener("htmx:afterOnLoad", attachTopPicksCartHandlers);
 class TopPicksCarousel {
   constructor(selector) {
     this.carousel = document.querySelector(selector);

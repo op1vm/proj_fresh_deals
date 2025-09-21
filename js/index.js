@@ -1,4 +1,8 @@
-function init() {
+
+import { loadProducts } from "./products.js";
+
+async function init() {
+  await loadProducts();
   import("./global.header-burger.js");
   import("./global.header-menu-list.js");
   import("./global.header-bitcoin-price.js");
@@ -11,7 +15,7 @@ function init() {
   import("./index.phone-burger-menu.js");
   import("./alert.js");
   import("./cart-modal.js");
-  import("./index.testimonials.js")
+  import("./index.testimonials.js");
 }
 
 const totalPartials = document.querySelectorAll(
